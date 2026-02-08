@@ -26,16 +26,18 @@ import { SlideThankYou } from './slide-thank-you';
 export function Presentation() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const goToNextSlide = () => {
-    if (currentSlide < 22) {
-      setCurrentSlide(currentSlide + 1);
-    }
+   const goToNextSlide = () => {
+    setCurrentSlide((prev) => {
+      if (prev < 22) return prev + 1;
+      return prev;
+    });
   };
 
   const goToPreviousSlide = () => {
-    if (currentSlide > 0) {
-      setCurrentSlide(currentSlide - 1);
-    }
+    setCurrentSlide((prev) => {
+      if (prev > 0) return prev - 1;
+      return prev;
+    });
   };
 
   const goToSlide = (index: number) => {
@@ -59,7 +61,29 @@ export function Presentation() {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentSlide]);
+  }, []);
+
+  // Keyboard navigation from parent (Webflow iframe fix)
+  useEffect(() => {
+  const handleMessage = (event: MessageEvent) => {
+    const allowedOrigins = [
+      "https://competition-metrics-fortinet-jan202.vercel.app",
+      "https://lwstaging.webflow.io",
+      "https://www.leadwalnut.com"
+    ];
+
+    if (!allowedOrigins.includes(event.origin)) return;
+
+    if (event.data?.type === "KEY_NAV") {
+      if (event.data.key === "ArrowRight") goToNextSlide();
+      if (event.data.key === "ArrowLeft") goToPreviousSlide();
+    }
+  };
+
+  window.addEventListener("message", handleMessage);
+  return () => window.removeEventListener("message", handleMessage);
+}, []);
+
 
   const slides = [
     <SlideCover onNavigateHome={goToHome} />,
