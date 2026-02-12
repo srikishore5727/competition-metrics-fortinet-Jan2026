@@ -29,7 +29,7 @@ export function Presentation() {
 
   const goToNextSlide = () => {
     setCurrentSlide((prev) => {
-      if (prev < 22) return prev + 1;
+      if (prev < 23) return prev + 1;
       return prev;
     });
   };
