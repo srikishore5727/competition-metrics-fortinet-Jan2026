@@ -56,7 +56,7 @@ export function SlideTOC({ onNavigate, onNavigateHome }: TOCProps) {
       items: [
         { label: 'Content Gap', slideIndex: 20 },
         { label: 'Keyword Gap', slideIndex: 21 },
-        { label: 'Web Experience', slideIndex: 20}
+        { label: 'Web Experience', slideIndex: 22}
       ],
     },
   ];
