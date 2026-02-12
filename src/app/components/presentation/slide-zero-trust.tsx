@@ -235,13 +235,13 @@ export function SlideZeroTrust({ onNavigateHome }: { onNavigateHome?: () => void
               icon={TrendingUp}
               sentiment="positive"
               headline="Fortinet Keyword Lead"
-              body="Fortinet: 226 Zero Trust keywords, +27% (Oct-Jan)"
+              body="226 Zero Trust keywords, +27% (Oct-Jan)"
             />
             <ContextualInsightCard
               icon={Shield}
               sentiment="neutral"
               headline="Palo Alto Growth"
-              body="Palo Alto: 188 keywords, +32% strong growth (Oct-Jan)"
+              body="188 keywords, +32% strong growth (Oct-Jan)"
             />
           </>
         );
@@ -252,13 +252,13 @@ export function SlideZeroTrust({ onNavigateHome }: { onNavigateHome?: () => void
               icon={Shield}
               sentiment="positive"
               headline="Fortinet Page 1 Lead"
-              body="Fortinet: 206 Page 1, 91.2% ratio, top (Oct-Jan)"
+              body="206 Page 1, 91.2% ratio, top (Oct-Jan)"
             />
             <ContextualInsightCard
               icon={TrendingUp}
               sentiment="neutral"
               headline="Palo Alto Visibility"
-              body="Palo Alto: 169 Page 1 rankings, 89.9% ratio (Oct-Jan)"
+              body="169 Page 1 rankings, 89.9% ratio (Oct-Jan)"
             />
           </>
         );
@@ -269,13 +269,13 @@ export function SlideZeroTrust({ onNavigateHome }: { onNavigateHome?: () => void
               icon={Zap}
               sentiment="positive"
               headline="Fortinet Traffic Surge"
-              body="Fortinet: 6.4K → 10.5K visits, +64.6% (Oct-Jan)"
+              body="6.4K → 10.5K visits, +64.6% (Oct-Jan)"
             />
             <ContextualInsightCard
               icon={Zap}
               sentiment="negative"
               headline="PA & CS Lead Traffic"
-              body="PA: 12.4K, +48.5%; CS: 11.7K surge top two (Oct-Jan)"
+              body="12.4K, +48.5%; CS: 11.7K surge top two (Oct-Jan)"
             />
           </>
         );
@@ -286,13 +286,13 @@ export function SlideZeroTrust({ onNavigateHome }: { onNavigateHome?: () => void
               icon={Sparkles}
               sentiment="neutral"
               headline="Fortinet AI Competitive"
-              body="Fortinet: 178 AI keywords, competitive (Nov-Jan)"
+              body="178 AI keywords, competitive (Nov-Jan)"
             />
             <ContextualInsightCard
               icon={Sparkles}
               sentiment="neutral"
               headline="CrowdStrike AI Lead"
-              body="CrowdStrike: 183 AI keywords, slightly ahead (Nov-Jan)"
+              body="183 AI keywords, slightly ahead (Nov-Jan)"
             />
           </>
         );
@@ -406,9 +406,9 @@ export function SlideZeroTrust({ onNavigateHome }: { onNavigateHome?: () => void
             </div>
 
             {/* Insights Section - 4 columns */}
-            <div className="col-span-4 flex flex-col gap-4">
+            {/* <div className="col-span-4 flex flex-col gap-4">
               {getInsights()}
-            </div>
+            </div> */}
           </div>
         </div>
       ) : (

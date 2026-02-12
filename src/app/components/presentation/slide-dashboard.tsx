@@ -234,13 +234,13 @@ export function SlideDashboard({ onNavigateHome }: { onNavigateHome?: () => void
               icon={TrendingUp}
               sentiment="positive"
               headline="Fortinet Keyword Growth"
-              body="Fortinet: 175 → 196 SASE keywords, +12% (Oct-Jan)"
+              body="175 → 196 SASE keywords, +12% (Oct-Jan)"
             />
             <ContextualInsightCard
               icon={BarChart3}
               sentiment="neutral"
               headline="Palo Alto Leads"
-              body="Palo Alto: 200 SASE keywords, closely ahead (Oct-Jan)"
+              body="200 SASE keywords, closely ahead (Oct-Jan)"
             />
           </>
         );
@@ -251,13 +251,13 @@ export function SlideDashboard({ onNavigateHome }: { onNavigateHome?: () => void
               icon={TrendingUp}
               sentiment="positive"
               headline="Fortinet Elite Visibility"
-              body="Fortinet: 188 Page 1, 95.9% ratio, matches PA (Oct-Jan)"
+              body="188 Page 1, 95.9% ratio, matches PA (Oct-Jan)"
             />
             <ContextualInsightCard
               icon={BarChart3}
               sentiment="neutral"
               headline="Palo Alto Visibility"
-              body="Palo Alto: 188 Page 1 rankings, tied with Fortinet (Oct-Jan)"
+              body="188 Page 1 rankings, tied with Fortinet (Oct-Jan)"
             />
           </>
         );
@@ -268,13 +268,13 @@ export function SlideDashboard({ onNavigateHome }: { onNavigateHome?: () => void
               icon={Zap}
               sentiment="negative"
               headline="Fortinet Traffic Volatility"
-              body="Fortinet: 11K → 10K SASE traffic, -9.2% drop (Oct-Jan)"
+              body="11K → 10K SASE traffic, -9.2% drop (Oct-Jan)"
             />
             <ContextualInsightCard
               icon={Zap}
               sentiment="neutral"
               headline="Palo Alto Consistent"
-              body="Palo Alto: Steady growth +18.5% to 10.7K (Oct-Jan)"
+              body="Steady growth +18.5% to 10.7K (Oct-Jan)"
             />
           </>
         );
@@ -285,13 +285,13 @@ export function SlideDashboard({ onNavigateHome }: { onNavigateHome?: () => void
               icon={Sparkles}
               sentiment="neutral"
               headline="Fortinet AI Stable"
-              body="Fortinet: 125 SASE AI keywords, stable (Nov-Jan)"
+              body="125 SASE AI keywords, stable (Nov-Jan)"
             />
             <ContextualInsightCard
               icon={Sparkles}
               sentiment="neutral"
               headline="Palo Alto AI Leads"
-              body="Palo Alto: 127 → 130 AI keywords, +2.4% (Nov-Jan)"
+              body="127 → 130 AI keywords, +2.4% (Nov-Jan)"
             />
           </>
         );
@@ -405,9 +405,9 @@ export function SlideDashboard({ onNavigateHome }: { onNavigateHome?: () => void
             </div>
 
             {/* Insights Section - 4 columns */}
-            <div className="col-span-4 flex flex-col gap-4">
+            {/* <div className="col-span-4 flex flex-col gap-4">
               {getInsights()}
-            </div>
+            </div> */}
           </div>
         </div>
       ) : (

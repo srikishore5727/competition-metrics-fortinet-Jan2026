@@ -54,8 +54,9 @@ export function SlideTOC({ onNavigate, onNavigateHome }: TOCProps) {
       icon: Lightbulb,
       color: '#FF8E5A',
       items: [
-        { label: 'Palo Alto - Content Gap', slideIndex: 20 },
-        { label: 'Keyword Gap Analysis', slideIndex: 21 },
+        { label: 'Content Gap', slideIndex: 20 },
+        { label: 'Keyword Gap', slideIndex: 21 },
+        { label: 'Web Experience', slideIndex: 20}
       ],
     },
   ];

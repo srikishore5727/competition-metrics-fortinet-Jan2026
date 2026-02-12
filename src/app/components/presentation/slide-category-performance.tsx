@@ -20,7 +20,7 @@ type CategoryType = 'sase' | 'otSecurity' | 'ztna' | 'cloudSecurity' | 'secOps';
 const categories = [
   {
     id: 'sase' as CategoryType,
-    name: 'Secure Access Service Edge (SASE)',
+    name: 'SASE',
     topPerformer: 'Palo Alto',
     topPerformerColor: '#FFB14A',
     data: [
@@ -297,7 +297,7 @@ export function SlideCategoryPerformance({ onNavigateHome }: { onNavigateHome?: 
           </div>
 
           {/* Insights Section - 4 columns */}
-          <div className="col-span-4 flex flex-col gap-4">
+          {/* <div className="col-span-4 flex flex-col gap-4">
             {activeCategory.insights.map((insight, idx) => (
               <ContextualInsightCard
                 key={idx}
@@ -307,7 +307,7 @@ export function SlideCategoryPerformance({ onNavigateHome }: { onNavigateHome?: 
                 body={insight.content}
               />
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Competitor Legend at bottom */}

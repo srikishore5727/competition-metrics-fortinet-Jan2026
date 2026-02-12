@@ -234,13 +234,13 @@ export function SlideCloudSecurity({ onNavigateHome }: { onNavigateHome?: () => 
               icon={Shield}
               sentiment="positive"
               headline="Fortinet Keyword Growth"
-              body="Fortinet: 375 Cloud keywords, +16.1% growth (Oct-Jan)"
+              body="375 Cloud keywords, +16.1% growth (Oct-Jan)"
             />
             <ContextualInsightCard
               icon={Shield}
               sentiment="negative"
               headline="Palo Alto Leads"
-              body="Palo Alto: 728 keywords, +24.4%, ahead (Oct-Jan)"
+              body="728 keywords, +24.4%, ahead (Oct-Jan)"
             />
           </>
         );
@@ -251,13 +251,13 @@ export function SlideCloudSecurity({ onNavigateHome }: { onNavigateHome?: () => 
               icon={TrendingUp}
               sentiment="neutral"
               headline="Fortinet Visibility"
-              body="Fortinet: 181 Page 1, 48.3% ratio, gap (Oct-Jan)"
+              body="181 Page 1, 48.3% ratio, gap (Oct-Jan)"
             />
             <ContextualInsightCard
               icon={TrendingUp}
               sentiment="negative"
               headline="Palo Alto Page 1 Lead"
-              body="Palo Alto: 565 Page 1, 77.6% ratio, strong (Oct-Jan)"
+              body="565 Page 1, 77.6% ratio, strong (Oct-Jan)"
             />
           </>
         );
@@ -268,13 +268,13 @@ export function SlideCloudSecurity({ onNavigateHome }: { onNavigateHome?: () => 
               icon={Zap}
               sentiment="positive"
               headline="Fortinet Traffic Surge"
-              body="Fortinet: 40.7K Cloud traffic, +292% Dec surge (Oct-Jan)"
+              body="40.7K Cloud traffic, +292% Dec surge (Oct-Jan)"
             />
             <ContextualInsightCard
               icon={Zap}
               sentiment="neutral"
               headline="PA Traffic Behind"
-              body="Palo Alto: 5.1K traffic, far behind Fortinet (Oct-Jan)"
+              body="5.1K traffic, far behind Fortinet (Oct-Jan)"
             />
           </>
         );
@@ -285,13 +285,13 @@ export function SlideCloudSecurity({ onNavigateHome }: { onNavigateHome?: () => 
               icon={Sparkles}
               sentiment="neutral"
               headline="Fortinet AI Presence"
-              body="Fortinet: 237 Cloud AI keywords, competitive (Nov-Jan)"
+              body="237 Cloud AI keywords, competitive (Nov-Jan)"
             />
             <ContextualInsightCard
               icon={Sparkles}
               sentiment="negative"
               headline="Palo Alto AI Lead"
-              body="Palo Alto: 543 AI keywords, dominant lead (Nov-Jan)"
+              body="543 AI keywords, dominant lead (Nov-Jan)"
             />
           </>
         );
@@ -405,9 +405,9 @@ export function SlideCloudSecurity({ onNavigateHome }: { onNavigateHome?: () => 
             </div>
 
             {/* Insights Section - 4 columns */}
-            <div className="col-span-4 flex flex-col gap-4">
+            {/* <div className="col-span-4 flex flex-col gap-4">
               {getInsights()}
-            </div>
+            </div> */}
           </div>
         </div>
       ) : (

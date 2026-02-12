@@ -48,7 +48,7 @@ export function SlideCompetitiveIntel({ onNavigateHome }: { onNavigateHome?: () 
   return (
     <SlideContainer slideNumber={21} onNavigateHome={onNavigateHome}>
       <SlideHeader 
-        title="Palo Alto - Content Gap" 
+        title="Content Gap - Palo Alto" 
         subtitle="Key Insights & Strategic Actions"
       />
 

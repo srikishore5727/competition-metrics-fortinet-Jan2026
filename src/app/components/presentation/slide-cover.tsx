@@ -4,7 +4,22 @@ interface SlideCoverProps {
 
 export function SlideCover({ onNavigateHome }: SlideCoverProps) {
   return (
-    <div className="w-full h-full bg-white flex items-center justify-center p-12">
+    <div className="relative w-full h-full bg-white flex items-center justify-center p-12">
+      
+      {/* Left Logo */}
+      <img
+        src="https://interlinking.leadwalnut.com/assets/images/leadwalnut-logo.png"
+        alt="LeadWalnut Logo"
+        className="absolute left-8 top-[-80px] h-10 object-contain"
+      />
+
+      {/* Right Logo */}
+      <img
+        src="https://cdn.prod.website-files.com/64c7db62bef432a73deb39fa/653113a6188cd884f0dd1bd7_fortinet-logo.svg"
+        alt="Fortinet Logo"
+        className="absolute right-8 top-[-80px] h-7 object-contain"
+      />
+
       <div className="max-w-4xl mx-auto text-center">
         {/* Main Title */}
         <div className="mb-6">
@@ -12,7 +27,7 @@ export function SlideCover({ onNavigateHome }: SlideCoverProps) {
             SEO & AI VISIBILITY
           </div>
           <h1 className="text-[44px] font-bold text-black leading-tight tracking-tight mb-4 uppercase">
-            Competitive Analysis for Fortinet - Jan 2026
+            Competitive Analysis for Fortinet - Competition Analysis JAN 2026
           </h1>
         </div>
 
@@ -34,7 +49,9 @@ export function SlideCover({ onNavigateHome }: SlideCoverProps) {
                 className="w-3 h-3 rounded-full"
                 style={{ backgroundColor: comp.color }}
               />
-              <span className="text-sm font-medium text-gray-700">{comp.name}</span>
+              <span className="text-sm font-medium text-gray-700">
+                {comp.name}
+              </span>
             </div>
           ))}
         </div>

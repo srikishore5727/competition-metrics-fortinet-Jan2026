@@ -156,13 +156,13 @@ export function SlideProfundMetrics({ onNavigateHome }: { onNavigateHome?: () =>
               icon={Award}
               sentiment="positive"
               headline="Fortinet AI Visibility"
-              body="Fortinet: 57.7% AI visibility, +0.7% lead (Nov-Jan)"
+              body="57.7% AI visibility, +0.7% lead (Nov-Jan)"
             />
             <ContextualInsightCard
               icon={Target}
               sentiment="neutral"
               headline="Palo Alto AI Gap"
-              body="Palo Alto: 43.5% visibility, -14.2pp behind (Nov-Jan)"
+              body="43.5% visibility, -14.2pp behind (Nov-Jan)"
             />
           </>
         );
@@ -173,13 +173,13 @@ export function SlideProfundMetrics({ onNavigateHome }: { onNavigateHome?: () =>
               icon={Sparkles}
               sentiment="positive"
               headline="Fortinet Voice Lead"
-              body="Fortinet: 10.0% Share of Voice, +33% vs PA (Nov-Jan)"
+              body="10.0% Share of Voice, +33% vs PA (Nov-Jan)"
             />
             <ContextualInsightCard
               icon={TrendingDown}
               sentiment="neutral"
               headline="Cisco Share of Voice"
-              body="Cisco: 5.9% Share of Voice, lower share (Nov-Jan)"
+              body="5.9% Share of Voice, lower share (Nov-Jan)"
             />
           </>
         );
@@ -190,13 +190,13 @@ export function SlideProfundMetrics({ onNavigateHome }: { onNavigateHome?: () =>
               icon={Zap}
               sentiment="positive"
               headline="Fortinet Citation Surge"
-              body="Fortinet: 9.2% → 12.4% Citation, +34.8% (Nov-Jan)"
+              body="9.2% → 12.4% Citation, +34.8% (Nov-Jan)"
             />
             <ContextualInsightCard
               icon={TrendingDown}
               sentiment="negative"
               headline="Palo Alto Decline"
-              body="Palo Alto: Declining citation rate, behind (Nov-Jan)"
+              body="Declining citation rate, behind (Nov-Jan)"
             />
           </>
         );
@@ -282,9 +282,9 @@ export function SlideProfundMetrics({ onNavigateHome }: { onNavigateHome?: () =>
             </div>
 
             {/* Insights Section - 4 columns */}
-            <div className="col-span-4 flex flex-col gap-4">
+            {/* <div className="col-span-4 flex flex-col gap-4">
               {getInsights()}
-            </div>
+            </div> */}
           </div>
         </div>
       ) : (

@@ -36,6 +36,12 @@ const untappedKeywordsData = [
   { keyword: 'quantum computing definition', intent: 'Informational', volume: 880, kd: 83 },
   { keyword: 'define quantum computing', intent: 'Informational', volume: 720, kd: 81 },
   { keyword: 'quantum networks', intent: 'Informational', volume: 720, kd: 39 },
+  { keyword: 'container security best practices', intent: 'Commercial', volume: 1000, kd: 17},
+  { keyword: 'cloud security posture management tools', intent: 'Commercial', volume: 1000, kd: 35},
+  { keyword: 'best saas security tools', intent: 'Commercial', volume: 390, kd: 6},
+  { keyword: 'cloud security checklist', intent: 'Informational', volume: 260, kd: 14},
+  { keyword: 'vulnerability scanning best practices', intent: 'Commercial', volume: 210, kd: 18},
+  { keyword: 'top aiops platform for cybersecurity', intent: 'Commercial', volume: 140, kd: 6},
 ];
 
 // Multi-Competitor Comparison Data / Weak Keywords (Image 3)
@@ -50,14 +56,14 @@ const multiCompetitorData = [
 ];
 
 // PA VS Fortinet Data (Image 4)
-const paVsFortinetData = [
-  { keyword: 'container security best practices', intent: 'Commercial', volume: 1000, kd: 17, ft: 0, pa: 33 },
-  { keyword: 'cloud security posture management tools', intent: 'Commercial', volume: 1000, kd: 35, ft: 0, pa: 8 },
-  { keyword: 'best saas security tools', intent: 'Commercial', volume: 390, kd: 6, ft: 0, pa: 10 },
-  { keyword: 'cloud security checklist', intent: 'Informational', volume: 260, kd: 14, ft: 0, pa: 46 },
-  { keyword: 'vulnerability scanning best practices', intent: 'Commercial', volume: 210, kd: 18, ft: 0, pa: 33 },
-  { keyword: 'top aiops platform for cybersecurity', intent: 'Commercial', volume: 140, kd: 6, ft: 0, pa: 16 },
-];
+// const paVsFortinetData = [
+//   { keyword: 'container security best practices', intent: 'Commercial', volume: 1000, kd: 17},
+//   { keyword: 'cloud security posture management tools', intent: 'Commercial', volume: 1000, kd: 35},
+//   { keyword: 'best saas security tools', intent: 'Commercial', volume: 390, kd: 6},
+//   { keyword: 'cloud security checklist', intent: 'Informational', volume: 260, kd: 14},
+//   { keyword: 'vulnerability scanning best practices', intent: 'Commercial', volume: 210, kd: 18},
+//   { keyword: 'top aiops platform for cybersecurity', intent: 'Commercial', volume: 140, kd: 6},
+// ];
 
 export function SlideKeywordGap({ onNavigateHome }: { onNavigateHome?: () => void }) {
   const [activeTab, setActiveTab] = useState<'missing' | 'untapped' | 'multiCompetitor' | 'paVsFt'>('missing');
@@ -160,7 +166,7 @@ export function SlideKeywordGap({ onNavigateHome }: { onNavigateHome?: () => voi
           >
             Weak Keywords
           </button>
-          <button
+          {/* <button
             onClick={() => setActiveTab('paVsFt')}
             className={`px-8 py-3 text-sm font-semibold transition-all duration-200 relative ${
               activeTab === 'paVsFt'
@@ -176,7 +182,7 @@ export function SlideKeywordGap({ onNavigateHome }: { onNavigateHome?: () => voi
             }}
           >
             PA VS Fortinet
-          </button>
+          </button> */}
         </div>
 
         {/* Content Area */}

@@ -244,13 +244,13 @@ export function SlideSDWANMetrics({ onNavigateHome }: { onNavigateHome?: () => v
               icon={TrendingUp}
               sentiment="positive"
               headline="Fortinet Keyword Growth"
-              body="Fortinet: 175 → 196 SD-WAN keywords, +12% (Oct-Jan)"
+              body="175 → 196 SD-WAN keywords, +12% (Oct-Jan)"
             />
             <ContextualInsightCard
               icon={BarChart3}
               sentiment="neutral"
               headline="Cisco Leads Keywords"
-              body="Cisco: 314 SD-WAN keywords, +5.7% growth (Oct-Jan)"
+              body="314 SD-WAN keywords, +5.7% growth (Oct-Jan)"
             />
           </>
         );
@@ -261,13 +261,13 @@ export function SlideSDWANMetrics({ onNavigateHome }: { onNavigateHome?: () => v
               icon={TrendingUp}
               sentiment="positive"
               headline="Fortinet Page 1 Elite"
-              body="Fortinet: 188 Page 1, 96.1% ratio, top (Oct-Jan)"
+              body="188 Page 1, 96.1% ratio, top (Oct-Jan)"
             />
             <ContextualInsightCard
               icon={Target}
               sentiment="neutral"
               headline="Cisco Volume Leader"
-              body="Cisco: 252 Page 1 rankings, +4.1% growth (Oct-Jan)"
+              body="252 Page 1 rankings, +4.1% growth (Oct-Jan)"
             />
           </>
         );
@@ -278,13 +278,13 @@ export function SlideSDWANMetrics({ onNavigateHome }: { onNavigateHome?: () => v
               icon={Zap}
               sentiment="negative"
               headline="Fortinet Traffic Decline"
-              body="Fortinet: 11K → 10K traffic, -9.2% drop (Oct-Jan)"
+              body="11K → 10K traffic, -9.2% drop (Oct-Jan)"
             />
             <ContextualInsightCard
               icon={Zap}
               sentiment="neutral"
               headline="Palo Alto Steady Rise"
-              body="Palo Alto: Steady +18.5% to 10.7K traffic (Oct-Jan)"
+              body="Steady +18.5% to 10.7K traffic (Oct-Jan)"
             />
           </>
         );
@@ -295,13 +295,13 @@ export function SlideSDWANMetrics({ onNavigateHome }: { onNavigateHome?: () => v
               icon={Sparkles}
               sentiment="neutral"
               headline="Fortinet AI Stable"
-              body="Fortinet: 125 AI Overview keywords, stable (Nov-Jan)"
+              body="125 AI Overview keywords, stable (Nov-Jan)"
             />
             <ContextualInsightCard
               icon={Sparkles}
               sentiment="neutral"
               headline="Palo Alto AI Growth"
-              body="Palo Alto: 127 → 130 AI keywords, +2.4% (Nov-Jan)"
+              body="127 → 130 AI keywords, +2.4% (Nov-Jan)"
             />
           </>
         );
@@ -415,9 +415,9 @@ export function SlideSDWANMetrics({ onNavigateHome }: { onNavigateHome?: () => v
             </div>
 
             {/* Insights Section - 4 columns */}
-            <div className="col-span-4 flex flex-col gap-4">
+            {/* <div className="col-span-4 flex flex-col gap-4">
               {getInsights()}
-            </div>
+            </div> */}
           </div>
         </div>
       ) : (

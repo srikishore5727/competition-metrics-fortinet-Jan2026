@@ -1,6 +1,6 @@
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { useState } from 'react';
-import { Sparkles, BarChart3, TrendingUp, AlertTriangle } from 'lucide-react';
+import { Sparkles, BarChart3, TrendingUp, AlertTriangle, TrendingDown } from 'lucide-react';
 import { formatNumber } from '@/app/utils/format';
 import {
   SlideContainer,
@@ -158,16 +158,16 @@ export function SlideAIOverview({ onNavigateHome }: { onNavigateHome?: () => voi
       return (
         <>
           <ContextualInsightCard
-            icon={Sparkles}
+            icon={TrendingUp}
             sentiment="positive"
-            headline="Fortinet AI Growth"
-            body="Fortinet: 16.6K AI keywords, +34.3% growth (Oct-Jan)"
+            headline="Fortinet grew 12.4K→16.6K mentions (+4.2K) from Oct 2025–Jan 2026."
+            // body="16.6K AI keywords, +34.3% growth (Oct-Jan)"
           />
           <ContextualInsightCard
-            icon={BarChart3}
-            sentiment="negative"
-            headline="Cisco AI Keyword Lead"
-            body="Cisco: 18.1K AI keywords, +26.2%, leads (Oct-Jan)"
+            icon={TrendingUp}
+            sentiment="positive"
+            headline="Cisco leads 14.4K→18.1K (+3.7K); most competitors show steady growth."
+            // body="18.1K AI keywords, +26.2%, leads (Oct-Jan)"
           />
         </>
       );
@@ -177,14 +177,14 @@ export function SlideAIOverview({ onNavigateHome }: { onNavigateHome?: () => voi
           <ContextualInsightCard
             icon={TrendingUp}
             sentiment="positive"
-            headline="Fortinet Traffic Spike"
-            body="Fortinet: Dec spike 275K AI traffic, volatile (Oct-Jan)"
+            headline="Fortinet AI traffic rose 89.4K→104.0K (+14.6K) from Oct 2025–Jan 2026."
+            // body="Dec spike 275K AI traffic, volatile (Oct-Jan)"
           />
           <ContextualInsightCard
-            icon={AlertTriangle}
-            sentiment="negative"
-            headline="Cisco AI Traffic Lead"
-            body="Cisco: 127K AI traffic; CS drop 169K → 22K (Oct-Jan)"
+            icon={TrendingUp}
+            sentiment="positive"
+            headline="Cisco leads 105.8K→127.1K (+21.3K); most others show moderate growth overall."
+            // body="127K AI traffic; CS drop 169K → 22K (Oct-Jan)"
           />
         </>
       );

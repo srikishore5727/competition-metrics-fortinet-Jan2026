@@ -1,7 +1,7 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { COMPETITORS, ORGANIC_TRAFFIC, BRANDED_TRAFFIC, NON_BRANDED_TRAFFIC, MONTH_LABELS } from '@/app/data/seo-data';
 import { useState } from 'react';
-import { TrendingUp } from 'lucide-react';
+import { TrendingDown, TrendingUp } from 'lucide-react';
 import { formatNumber } from '@/app/utils/format';
 import {
   SlideContainer,
@@ -185,42 +185,47 @@ export function SlideTrafficOverviewTabs({ onNavigateHome }: SlideTrafficOvervie
           <InsightCard
             icon={TrendingUp}
             type="success"
-            content="Fortinet: +6.7% growth, 4.5M → 4.8M visits (Oct-Jan)"
+            content="Fortinet: Traffic increased by 6.7%, growing from 4.5M to 4.8M between Oct ’25 and Jan ’26."
           />
           <InsightCard
             icon={TrendingUp}
             type="info"
-            content="Cisco: Volatile, 33.5M spike Nov; Crowdstrike: -35% to 439K (Oct-Jan)"
+            content="Cisco: Traffic declined by 77% (19.7M → 4.5M) during the same period. A spike to 33.5M in Nov ’25 was likely spam-driven."
+          />
+          <InsightCard
+            icon={TrendingDown}
+            type="error"
+            content="CrowdStrike: Traffic decreased by 35%, from 679K to 439K, during the same timeline."
           />
         </InsightsSection>
       );
     } else if (activeTab === 'branded') {
       return (
         <InsightsSection>
-          <InsightCard
+          {/* <InsightCard
             icon={TrendingUp}
             type="warning"
             content="Fortinet: Branded traffic -38.4%, 878K → 541K (Oct-Jan)"
-          />
+          /> */}
           <InsightCard
             icon={TrendingUp}
             type="info"
-            content="Cisco: Branded -30.4%, 2.17M → 1.51M visits (Oct-Jan)"
+            content="Branded traffic declined across all brands, with Cisco still leading despite a 30.4% drop, followed by Fortinet at -38.4%."
           />
         </InsightsSection>
       );
     } else {
       return (
         <InsightsSection>
-          <InsightCard
+          {/* <InsightCard
             icon={TrendingUp}
             type="success"
             content="Fortinet: Non-branded +18.2%, 3.62M → 4.28M (Oct-Jan)"
-          />
+          /> */}
           <InsightCard
             icon={TrendingUp}
-            type="warning"
-            content="Cisco: Erratic non-branded, +80.4% then -6.6% swings (Oct-Jan)"
+            type="info"
+            content="Fortinet leads in non-branded traffic with 4.3M in Jan ’26, growing 18.2% from Oct ’25 to Jan ’26."
           />
         </InsightsSection>
       );

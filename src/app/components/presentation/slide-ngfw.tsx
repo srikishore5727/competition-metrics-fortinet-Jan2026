@@ -193,14 +193,14 @@ export function SlideNGFW({ onNavigateHome }: SlideNGFWProps) {
             <ContextualInsightCard
               icon={TrendingUp}
               sentiment="positive"
-              headline="Fortinet Keyword Lead"
-              body="Fortinet: 998 NGFW keywords, +11.4% growth (Oct-Jan)"
+              headline="Fortinet"
+              body="+11.4% growth from 896 to 996 (Oct-Jan)"
             />
             <ContextualInsightCard
               icon={BarChart3}
               sentiment="neutral"
-              headline="Palo Alto Strong Growth"
-              body="Palo Alto: 909 keywords, +25% growth rate (Oct-Jan)"
+              headline="Palo Alto"
+              body="+25% growth from 707 to 909 (Oct-Jan)"
             />
           </>
         );
@@ -210,14 +210,14 @@ export function SlideNGFW({ onNavigateHome }: SlideNGFWProps) {
             <ContextualInsightCard
               icon={TrendingUp}
               sentiment="positive"
-              headline="Fortinet Page 1 Leader"
-              body="Fortinet: 879 Page 1, +11.5%, 88.1% ratio (Oct-Jan)"
+              headline="Page 1"
+              body="Fortinet is leading with 11.5% growth & 88.1% of total keywords are on page 1"
             />
             <ContextualInsightCard
               icon={BarChart3}
               sentiment="neutral"
-              headline="Palo Alto Accelerating"
-              body="Palo Alto: 760 Page 1 rankings, +25% growth (Oct-Jan)"
+              headline="Palo Alto"
+              body="Behind Fortinet with the growth 25%"
             />
           </>
         );
@@ -227,15 +227,15 @@ export function SlideNGFW({ onNavigateHome }: SlideNGFWProps) {
             <ContextualInsightCard
               icon={Zap}
               sentiment="positive"
-              headline="Fortinet Traffic Growth"
-              body="Fortinet: +33.6% to 30.9K NGFW traffic (Oct-Jan)"
+              headline="Fortinet"
+              body="Steady growth and increase by 33.6%"
             />
-            <ContextualInsightCard
+            {/* <ContextualInsightCard
               icon={Zap}
               sentiment="negative"
               headline="Cisco Traffic Surge"
-              body="Cisco: +83.9% to 29.2K; Gap narrowed 7.2K→1.7K (Oct-Jan)"
-            />
+              body="+83.9% to 29.2K; Gap narrowed 7.2K→1.7K (Oct-Jan)"
+            /> */}
           </>
         );
       case 'aio':
@@ -244,15 +244,15 @@ export function SlideNGFW({ onNavigateHome }: SlideNGFWProps) {
             <ContextualInsightCard
               icon={Sparkles}
               sentiment="positive"
-              headline="Fortinet AI Lead"
-              body="Fortinet: 637 AI Overview keywords, +8.3% (Nov-Jan)"
+              headline="Fortinet"
+              body="Top player with 11.4% increase"
             />
-            <ContextualInsightCard
+            {/* <ContextualInsightCard
               icon={Sparkles}
               sentiment="neutral"
               headline="Palo Alto AI Growth"
-              body="Palo Alto: 587 AI Overview keywords, +18.4% (Nov-Jan)"
-            />
+              body="587 AI Overview keywords, +18.4% (Nov-Jan)"
+            /> */}
           </>
         );
       default:
@@ -370,9 +370,9 @@ export function SlideNGFW({ onNavigateHome }: SlideNGFWProps) {
             </div>
 
             {/* Insights Section - 4 columns */}
-            <div className="col-span-4 flex flex-col gap-4">
+            {/* <div className="col-span-4 flex flex-col gap-4">
               {getInsights()}
-            </div>
+            </div> */}
           </div>
 
           {/* Executive Note */}

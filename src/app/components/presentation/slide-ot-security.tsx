@@ -233,13 +233,13 @@ export function SlideOTSecurity({ onNavigateHome }: { onNavigateHome?: () => voi
               icon={Shield}
               sentiment="positive"
               headline="Fortinet Keyword Lead"
-              body="Fortinet: 226 OT Security keywords, +26.3% (Oct-Jan)"
+              body="226 OT Security keywords, +26.3% (Oct-Jan)"
             />
             <ContextualInsightCard
               icon={TrendingUp}
               sentiment="neutral"
               headline="Palo Alto Growth"
-              body="Palo Alto: 121 keywords, +27.4% strong growth (Oct-Jan)"
+              body="121 keywords, +27.4% strong growth (Oct-Jan)"
             />
           </>
         );
@@ -250,13 +250,13 @@ export function SlideOTSecurity({ onNavigateHome }: { onNavigateHome?: () => voi
               icon={TrendingUp}
               sentiment="positive"
               headline="Fortinet Page 1 Lead"
-              body="Fortinet: 192 Page 1, 85.0% ratio, top (Oct-Jan)"
+              body="192 Page 1, 85.0% ratio, top (Oct-Jan)"
             />
             <ContextualInsightCard
               icon={Shield}
               sentiment="neutral"
               headline="Palo Alto Visibility"
-              body="Palo Alto: 94 Page 1 keywords, +22.1% (Oct-Jan)"
+              body="94 Page 1 keywords, +22.1% (Oct-Jan)"
             />
           </>
         );
@@ -267,13 +267,13 @@ export function SlideOTSecurity({ onNavigateHome }: { onNavigateHome?: () => voi
               icon={Zap}
               sentiment="neutral"
               headline="Fortinet Traffic Stable"
-              body="Fortinet: 6.2K OT Security visits, steady (Oct-Jan)"
+              body="6.2K OT Security visits, steady (Oct-Jan)"
             />
             <ContextualInsightCard
               icon={Zap}
               sentiment="negative"
               headline="CrowdStrike Dominates"
-              body="CrowdStrike: 11.1K visits, 2x Fortinet+PA (Oct-Jan)"
+              body="11.1K visits, 2x Fortinet+PA (Oct-Jan)"
             />
           </>
         );
@@ -284,13 +284,13 @@ export function SlideOTSecurity({ onNavigateHome }: { onNavigateHome?: () => voi
               icon={Sparkles}
               sentiment="positive"
               headline="Fortinet AI Lead"
-              body="Fortinet: 151 → 175 AI keywords, +15.9% (Nov-Jan)"
+              body="151 → 175 AI keywords, +15.9% (Nov-Jan)"
             />
             <ContextualInsightCard
               icon={Sparkles}
               sentiment="neutral"
               headline="Palo Alto AI Growth"
-              body="Palo Alto: 84 → 98 AI keywords, +16.7% (Nov-Jan)"
+              body="84 → 98 AI keywords, +16.7% (Nov-Jan)"
             />
           </>
         );
@@ -404,9 +404,9 @@ export function SlideOTSecurity({ onNavigateHome }: { onNavigateHome?: () => voi
             </div>
 
             {/* Insights Section - 4 columns */}
-            <div className="col-span-4 flex flex-col gap-4">
+            {/* <div className="col-span-4 flex flex-col gap-4">
               {getInsights()}
-            </div>
+            </div> */}
           </div>
         </div>
       ) : (
