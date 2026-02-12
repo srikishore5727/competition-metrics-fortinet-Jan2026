@@ -97,9 +97,9 @@ export function SlideKeywordGap({ onNavigateHome }: { onNavigateHome?: () => voi
 
   const getTabDescription = () => {
     switch (activeTab) {
-      case 'missing': return 'Critical gaps in Fortinet\'s content strategy';
-      case 'untapped': return 'High-potential keywords with minimal competition';
-      case 'multiCompetitor': return 'Competitive keyword comparison with ranking positions';
+      case 'missing': return 'All competitors rank for keywords where Fortinet has no ranking presence.';
+      case 'untapped': return 'At least one competitor ranks for these keywords, but Fortinet does not rank.';
+      case 'multiCompetitor': return 'Fortinet ranks for these keywords but performs lower than competitors.';
       case 'paVsFt': return 'Competitive keyword comparison with ranking positions';
     }
   };
