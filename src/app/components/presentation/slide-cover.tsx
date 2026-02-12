@@ -27,7 +27,8 @@ export function SlideCover({ onNavigateHome }: SlideCoverProps) {
             SEO & AI VISIBILITY
           </div>
           <h1 className="text-[44px] font-bold text-black leading-tight tracking-tight mb-4 uppercase">
-            Competitive Analysis for Fortinet - Competition Analysis JAN 2026
+            Competition Analysis 
+            <h1 className="text-[44px] font-bold text-black leading-tight tracking-tight uppercase">JAN 2026</h1>
           </h1>
         </div>
 

@@ -21,6 +21,7 @@ import { SlideBacklinks } from './slide-backlinks';
 import { SlideIntelDivider } from './slide-intel-divider';
 import { SlideCompetitiveIntel } from './slide-competitive-intel';
 import { SlideKeywordGap } from './slide-keyword-gap';
+// import { SlideCompetitiveFindings } from './slide-competitive-finding';
 import { SlideThankYou } from './slide-thank-you';
 
 export function Presentation() {
@@ -107,6 +108,7 @@ export function Presentation() {
     <SlideIntelDivider onNavigateHome={goToHome} />,
     <SlideCompetitiveIntel onNavigateHome={goToHome} />,
     <SlideKeywordGap onNavigateHome={goToHome} />,
+    // <SlideCompetitiveFindings onNavigateHome={goToHome} />,
     <SlideThankYou onNavigateHome={goToHome} />,
   ];
 

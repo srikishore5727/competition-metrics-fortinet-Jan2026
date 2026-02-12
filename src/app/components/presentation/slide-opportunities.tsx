@@ -264,14 +264,14 @@ export function SlideOpportunities({ onNavigateHome }: SlideOpportunitiesProps) 
           <ContextualInsightCard
             icon={TrendingUp}
             sentiment="positive"
-            headline="Fortinet Keyword Growth"
-            body="Fortinet: +13.9% keywords, 296K → 337K (Oct-Jan)"
+            headline="Fortinet"
+            body="Increased by 13.9% (296K → 337K)."
           />
           <ContextualInsightCard
             icon={BarChart3}
             sentiment="neutral"
-            headline="Cisco Minimal Growth"
-            body="Cisco: 734K keywords, +1.4% growth only (Oct-Jan)"
+            headline="Cisco"
+            body="Still leading overall, but saw a 1.5% decline."
           />
         </>
       );
@@ -281,14 +281,14 @@ export function SlideOpportunities({ onNavigateHome }: SlideOpportunitiesProps) 
           <ContextualInsightCard
             icon={Award}
             sentiment="positive"
-            headline="Fortinet Best Conversion"
-            body="Fortinet: 45K Page 1, +7.1%, 13.4% ratio (Oct-Jan)"
+            headline="Fortinet"
+            body={<ul><li>Seen 7.1% growth from 42K to 45K</li><li>13.3% of total keywords are on page 1</li></ul>}
           />
           <ContextualInsightCard
             icon={Target}
             sentiment="neutral"
-            headline="Cisco Volume Leader"
-            body="Cisco: 89K Page 1 rankings, +2.3% growth (Oct-Jan)"
+            headline="Palo Alto"
+            body="Increased by 20% in Jan 26 from Dec 25"
           />
         </>
       );
