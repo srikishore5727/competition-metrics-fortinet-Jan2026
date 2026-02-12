@@ -14,16 +14,10 @@ export function SlideBacklinkDivider({ onNavigateHome }: SlideBacklinkDividerPro
       description: 'Total domain authority growth'
     },
     { 
-      name: 'Backlink Quality', 
+      name: 'Backlinks', 
       color: '#FF7AB6', 
       icon: Target,
       description: 'Domain rating distribution'
-    },
-    { 
-      name: 'Competitive Position', 
-      color: '#7ED957', 
-      icon: TrendingUp,
-      description: 'Market share comparison'
     },
   ];
 
@@ -52,7 +46,7 @@ export function SlideBacklinkDivider({ onNavigateHome }: SlideBacklinkDividerPro
         </p>
 
         {/* Sections Grid */}
-        <div className="grid grid-cols-3 gap-6 max-w-5xl">
+        <div className="grid grid-cols-2 gap-6 max-w-4xl">
           {sections.map((section, index) => {
             const IconComponent = section.icon;
             return (

@@ -233,8 +233,14 @@ export function SlideDashboard({ onNavigateHome }: { onNavigateHome?: () => void
             <ContextualInsightCard
               icon={TrendingUp}
               sentiment="positive"
-              headline="Strong Keyword Growth"
-              body="Fortinet shows steady growth from 175 to 196 keywords (+12% over 4 months), closely matching Palo Alto's 200—demonstrates strong content expansion in the emerging SASE category."
+              headline="Fortinet Keyword Growth"
+              body="Fortinet: 175 → 196 SASE keywords, +12% (Oct-Jan)"
+            />
+            <ContextualInsightCard
+              icon={BarChart3}
+              sentiment="neutral"
+              headline="Palo Alto Leads"
+              body="Palo Alto: 200 SASE keywords, closely ahead (Oct-Jan)"
             />
           </>
         );
@@ -242,10 +248,16 @@ export function SlideDashboard({ onNavigateHome }: { onNavigateHome?: () => void
         return (
           <>
             <ContextualInsightCard
-              icon={BarChart3}
+              icon={TrendingUp}
               sentiment="positive"
-              headline="Excellent Visibility Ratio"
-              body="Fortinet achieves 188 Page 1 rankings (95.9% of total keywords), matching Palo Alto's 188—demonstrates exceptional content relevance and strong competitive positioning in SASE category."
+              headline="Fortinet Elite Visibility"
+              body="Fortinet: 188 Page 1, 95.9% ratio, matches PA (Oct-Jan)"
+            />
+            <ContextualInsightCard
+              icon={BarChart3}
+              sentiment="neutral"
+              headline="Palo Alto Visibility"
+              body="Palo Alto: 188 Page 1 rankings, tied with Fortinet (Oct-Jan)"
             />
           </>
         );
@@ -255,11 +267,14 @@ export function SlideDashboard({ onNavigateHome }: { onNavigateHome?: () => void
             <ContextualInsightCard
               icon={Zap}
               sentiment="negative"
-              headline="Traffic Volatility Challenge"
-              body={[
-                "Fortinet shows volatile traffic pattern (11K→8.7K→10K), ending flat at 10,015 while Palo Alto demonstrates consistent growth (+18.5%, reaching 10,660).",
-                "Despite leading in keywords (196) and strong Page 1 presence (95.9%), traffic instability suggests content optimization opportunity to stabilize and grow SASE traffic.",
-              ]}
+              headline="Fortinet Traffic Volatility"
+              body="Fortinet: 11K → 10K SASE traffic, -9.2% drop (Oct-Jan)"
+            />
+            <ContextualInsightCard
+              icon={Zap}
+              sentiment="neutral"
+              headline="Palo Alto Consistent"
+              body="Palo Alto: Steady growth +18.5% to 10.7K (Oct-Jan)"
             />
           </>
         );
@@ -269,8 +284,14 @@ export function SlideDashboard({ onNavigateHome }: { onNavigateHome?: () => void
             <ContextualInsightCard
               icon={Sparkles}
               sentiment="neutral"
-              headline="Stable AI Overview Presence"
-              body="Palo Alto leads (127 → 130) with Fortinet close behind (125 → 125). HPE shows strong growth (+44.7%), while category demonstrates growing AI Overview adoption across SASE queries."
+              headline="Fortinet AI Stable"
+              body="Fortinet: 125 SASE AI keywords, stable (Nov-Jan)"
+            />
+            <ContextualInsightCard
+              icon={Sparkles}
+              sentiment="neutral"
+              headline="Palo Alto AI Leads"
+              body="Palo Alto: 127 → 130 AI keywords, +2.4% (Nov-Jan)"
             />
           </>
         );
@@ -327,9 +348,9 @@ export function SlideDashboard({ onNavigateHome }: { onNavigateHome?: () => void
   };
 
   return (
-    <SlideContainer slideNumber={11} onNavigateHome={onNavigateHome}>
+    <SlideContainer slideNumber={12} onNavigateHome={onNavigateHome} source="Ahrefs">
       <SlideHeader 
-        title="SASE Category Performance" 
+        title="SASE" 
         subtitle="(Oct 2025 - Jan 2026)"
       />
       
@@ -465,7 +486,7 @@ export function SlideDashboard({ onNavigateHome }: { onNavigateHome?: () => void
         </div>
       )}
 
-      <SlideFooter source="Source: Semrush" />
+      <SlideFooter source="Source: Ahrefs" />
     </SlideContainer>
   );
 }

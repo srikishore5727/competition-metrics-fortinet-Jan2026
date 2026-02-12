@@ -234,8 +234,14 @@ export function SlideZeroTrust({ onNavigateHome }: { onNavigateHome?: () => void
             <ContextualInsightCard
               icon={TrendingUp}
               sentiment="positive"
-              headline="Strong Keyword Leadership"
-              body="Fortinet achieves 226 keywords (+27% growth), closely matching Palo Alto's 228. CrowdStrike shows strong market presence with 215 keywords, intensifying Zero Trust category competition."
+              headline="Fortinet Keyword Lead"
+              body="Fortinet: 226 Zero Trust keywords, +27% (Oct-Jan)"
+            />
+            <ContextualInsightCard
+              icon={Shield}
+              sentiment="neutral"
+              headline="Palo Alto Growth"
+              body="Palo Alto: 188 keywords, +32% strong growth (Oct-Jan)"
             />
           </>
         );
@@ -245,8 +251,14 @@ export function SlideZeroTrust({ onNavigateHome }: { onNavigateHome?: () => void
             <ContextualInsightCard
               icon={Shield}
               sentiment="positive"
-              headline="Excellent Page 1 Performance"
-              body="Fortinet achieves 206 Page 1 rankings (91.2% visibility ratio), outperforming Palo Alto's 92.1% and CrowdStrike's 91.2%. Strong quality indicator in competitive Zero Trust landscape."
+              headline="Fortinet Page 1 Lead"
+              body="Fortinet: 206 Page 1, 91.2% ratio, top (Oct-Jan)"
+            />
+            <ContextualInsightCard
+              icon={TrendingUp}
+              sentiment="neutral"
+              headline="Palo Alto Visibility"
+              body="Palo Alto: 169 Page 1 rankings, 89.9% ratio (Oct-Jan)"
             />
           </>
         );
@@ -255,12 +267,15 @@ export function SlideZeroTrust({ onNavigateHome }: { onNavigateHome?: () => void
           <>
             <ContextualInsightCard
               icon={Zap}
+              sentiment="positive"
+              headline="Fortinet Traffic Surge"
+              body="Fortinet: 6.4K → 10.5K visits, +64.6% (Oct-Jan)"
+            />
+            <ContextualInsightCard
+              icon={Zap}
               sentiment="negative"
-              headline="CrowdStrike & Palo Alto Lead Traffic"
-              body={[
-                "Palo Alto dominates with 12.4K visits (+48.5%), while CrowdStrike surges dramatically to 11.7K. Fortinet shows strong recovery (6.4K → 10.5K, +64.6%).",
-                "Despite keyword leadership, Fortinet trails in traffic—continued focus on high-volume Zero Trust terms critical to close gap with market leaders."
-              ]}
+              headline="PA & CS Lead Traffic"
+              body="PA: 12.4K, +48.5%; CS: 11.7K surge top two (Oct-Jan)"
             />
           </>
         );
@@ -269,9 +284,15 @@ export function SlideZeroTrust({ onNavigateHome }: { onNavigateHome?: () => void
           <>
             <ContextualInsightCard
               icon={Sparkles}
-              sentiment="positive"
-              headline="Leading AI Overview Presence"
-              body="CrowdStrike leads with 183 AIO keywords, closely followed by Fortinet (178) and Palo Alto (171). Strong competitive positioning across all major players in emerging AI search landscape for Zero Trust."
+              sentiment="neutral"
+              headline="Fortinet AI Competitive"
+              body="Fortinet: 178 AI keywords, competitive (Nov-Jan)"
+            />
+            <ContextualInsightCard
+              icon={Sparkles}
+              sentiment="neutral"
+              headline="CrowdStrike AI Lead"
+              body="CrowdStrike: 183 AI keywords, slightly ahead (Nov-Jan)"
             />
           </>
         );
@@ -328,9 +349,9 @@ export function SlideZeroTrust({ onNavigateHome }: { onNavigateHome?: () => void
   };
 
   return (
-    <SlideContainer slideNumber={12} onNavigateHome={onNavigateHome}>
+    <SlideContainer slideNumber={12} onNavigateHome={onNavigateHome} source="Ahrefs">
       <SlideHeader 
-        title="Zero Trust Security Category Performance" 
+        title="Zero Trust Security" 
         subtitle="(Oct 2025 - Jan 2026)"
       />
       
@@ -466,7 +487,7 @@ export function SlideZeroTrust({ onNavigateHome }: { onNavigateHome?: () => void
         </div>
       )}
 
-      <SlideFooter source="Source: Semrush" />
+      <SlideFooter source="Source: Ahrefs" />
     </SlideContainer>
   );
 }

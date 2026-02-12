@@ -25,30 +25,30 @@ const VENDORS = [
 
 // Initial data - Oct, Nov, Dec 2025, Jan 2026
 const TOTAL_KEYWORDS_DATA_INITIAL = {
-  fortinet: [323, 350, 335, 375],
-  cisco: [187, 187, 165, 157],
-  hpe: [19, 32, 18, 14],
-  paloalto: [585, 719, 724, 728],
-  checkpoint: [291, 293, 293, 288],
-  crowdstrike: [362, 313, 300, 300],
+  fortinet: [231, 259, 289, 275],
+  cisco: [127, 137, 165, 157],
+  hpe: [19, 20, 19, 20],
+  paloalto: [203, 219, 254, 239],
+  checkpoint: [237, 223, 215, 208],
+  crowdstrike: [0, 303, 323, 290],
 };
 
 const CUMULATIVE_TRAFFIC_DATA_INITIAL = {
-  fortinet: [10372, 11959, 14099, 40660],
-  cisco: [3066, 1968, 1769, 1688],
-  hpe: [35, 52, 19, 40],
-  paloalto: [3938, 4562, 4819, 5119],
-  checkpoint: [2529, 3184, 3212, 3216],
-  crowdstrike: [0, 3447, 4150, 4453],
+  fortinet: [13737, 144268, 48266, 48119],
+  cisco: [1008, 633, 734, 821],
+  hpe: [380, 458, 840, 407],
+  paloalto: [29305, 178295, 171256, 213347],
+  checkpoint: [74645, 5634, 5246, 3393],
+  crowdstrike: [0, 62044, 114510, 176313],
 };
 
 const PAGE_ONE_KEYWORDS_DATA_INITIAL = {
-  fortinet: [183, 179, 179, 181],
-  cisco: [94, 83, 70, 66],
-  hpe: [8, 11, 5, 4],
-  paloalto: [472, 563, 560, 565],
-  checkpoint: [215, 213, 215, 212],
-  crowdstrike: [0, 243, 231, 231],
+  fortinet: [163, 179, 199, 173],
+  cisco: [57, 48, 49, 38],
+  hpe: [11, 14, 9, 9],
+  paloalto: [149, 149, 164, 138],
+  checkpoint: [175, 142, 91, 86],
+  crowdstrike: [0, 249, 234, 198],
 };
 
 const AIO_DATA_INITIAL = {
@@ -232,9 +232,15 @@ export function SlideCloudSecurity({ onNavigateHome }: { onNavigateHome?: () => 
           <>
             <ContextualInsightCard
               icon={Shield}
+              sentiment="positive"
+              headline="Fortinet Keyword Growth"
+              body="Fortinet: 375 Cloud keywords, +16.1% growth (Oct-Jan)"
+            />
+            <ContextualInsightCard
+              icon={Shield}
               sentiment="negative"
-              headline="Palo Alto Dominates Cloud Security"
-              body="Palo Alto leads with 728 keywords (+24.4%), far ahead of Fortinet's 375 (+16.1%). CrowdStrike shows declining presence (362 → 300), while Fortinet demonstrates steady growth in expanding category."
+              headline="Palo Alto Leads"
+              body="Palo Alto: 728 keywords, +24.4%, ahead (Oct-Jan)"
             />
           </>
         );
@@ -243,9 +249,15 @@ export function SlideCloudSecurity({ onNavigateHome }: { onNavigateHome?: () => 
           <>
             <ContextualInsightCard
               icon={TrendingUp}
+              sentiment="neutral"
+              headline="Fortinet Visibility"
+              body="Fortinet: 181 Page 1, 48.3% ratio, gap (Oct-Jan)"
+            />
+            <ContextualInsightCard
+              icon={TrendingUp}
               sentiment="negative"
-              headline="Visibility Gap vs. Leaders"
-              body="Palo Alto dominates with 565 Page 1 rankings (77.6% ratio), while Fortinet achieves only 181 (48.3% ratio). Significant content optimization needed to compete with category leaders in Cloud Security."
+              headline="Palo Alto Page 1 Lead"
+              body="Palo Alto: 565 Page 1, 77.6% ratio, strong (Oct-Jan)"
             />
           </>
         );
@@ -255,11 +267,14 @@ export function SlideCloudSecurity({ onNavigateHome }: { onNavigateHome?: () => 
             <ContextualInsightCard
               icon={Zap}
               sentiment="positive"
-              headline="Dramatic Traffic Breakthrough"
-              body={[
-                "Fortinet achieves remarkable growth to 40.7K visits (+292% from Dec)—dramatically surpassing all competitors including Palo Alto (5.1K) and CrowdStrike (4.5K).",
-                "Exceptional traffic performance despite lower keyword volume indicates successful high-value content strategy in Cloud Security—capitalize on this momentum."
-              ]}
+              headline="Fortinet Traffic Surge"
+              body="Fortinet: 40.7K Cloud traffic, +292% Dec surge (Oct-Jan)"
+            />
+            <ContextualInsightCard
+              icon={Zap}
+              sentiment="neutral"
+              headline="PA Traffic Behind"
+              body="Palo Alto: 5.1K traffic, far behind Fortinet (Oct-Jan)"
             />
           </>
         );
@@ -268,9 +283,15 @@ export function SlideCloudSecurity({ onNavigateHome }: { onNavigateHome?: () => 
           <>
             <ContextualInsightCard
               icon={Sparkles}
+              sentiment="neutral"
+              headline="Fortinet AI Presence"
+              body="Fortinet: 237 Cloud AI keywords, competitive (Nov-Jan)"
+            />
+            <ContextualInsightCard
+              icon={Sparkles}
               sentiment="negative"
-              headline="Palo Alto Leads AI Overview"
-              body="Palo Alto dominates AI Overview with 543 keywords—significantly ahead of CrowdStrike (248) and Fortinet (237). Gap indicates need for enhanced AI-optimized cloud security content strategy."
+              headline="Palo Alto AI Lead"
+              body="Palo Alto: 543 AI keywords, dominant lead (Nov-Jan)"
             />
           </>
         );
@@ -327,9 +348,9 @@ export function SlideCloudSecurity({ onNavigateHome }: { onNavigateHome?: () => 
   };
 
   return (
-    <SlideContainer slideNumber={13} onNavigateHome={onNavigateHome}>
+    <SlideContainer slideNumber={13} onNavigateHome={onNavigateHome} source="Ahrefs">
       <SlideHeader 
-        title="Cloud Security Category Performance" 
+        title="Cloud Security" 
         subtitle="(Oct 2025 - Jan 2026)"
       />
       
@@ -465,7 +486,7 @@ export function SlideCloudSecurity({ onNavigateHome }: { onNavigateHome?: () => 
         </div>
       )}
 
-      <SlideFooter source="Source: Semrush" />
+      <SlideFooter source="Source: Ahrefs" />
     </SlideContainer>
   );
 }

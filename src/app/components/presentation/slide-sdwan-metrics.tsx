@@ -1,6 +1,6 @@
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { useState } from 'react';
-import { TrendingUp, BarChart3, Zap, Sparkles } from 'lucide-react';
+import { TrendingUp, BarChart3, Zap, Sparkles, Target } from 'lucide-react';
 import { formatChartAxisNumber } from '@/app/utils/format';
 import {
   SlideContainer,
@@ -25,30 +25,30 @@ const VENDORS = [
 
 // Initial data - Oct, Nov, Dec 2025, Jan 2026
 const TOTAL_KEYWORDS_DATA_INITIAL = {
-  fortinet: [175, 181, 189, 196],
-  cisco: [129, 144, 154, 160],
-  hpe: [33, 45, 65, 70],
-  paloalto: [179, 182, 195, 200],
-  checkpoint: [65, 99, 114, 114],
-  crowdstrike: [35, 44, 48, 48],
+  fortinet: [288, 289, 295, 304],
+  cisco: [297, 308, 306, 314],
+  hpe: [127, 135, 128, 125],
+  paloalto: [283, 291, 309, 312],
+  checkpoint: [48, 65, 68, 79],
+  crowdstrike: [0, 0, 1, 1],
 };
 
 const CUMULATIVE_TRAFFIC_DATA_INITIAL = {
-  fortinet: [11031, 8746, 10024, 10015],
-  cisco: [1921, 2090, 1976, 2109],
-  hpe: [227, 107, 137, 118],
-  paloalto: [8998, 9442, 10263, 10660],
-  checkpoint: [818, 1270, 1368, 1372],
-  crowdstrike: [325, 423, 436, 436],
+  fortinet: [5961, 5984, 6055, 6196],
+  cisco: [9702, 9574, 8833, 8824],
+  hpe: [1584, 1554, 1538, 1138],
+  paloalto: [6979, 7379, 8021, 8281],
+  checkpoint: [98, 262, 167, 215],
+  crowdstrike: [0, 0, 0, 0],
 };
 
 const PAGE_ONE_KEYWORDS_DATA_INITIAL = {
-  fortinet: [165, 167, 179, 188],
-  cisco: [114, 128, 128, 131],
-  hpe: [14, 13, 16, 15],
-  paloalto: [173, 174, 182, 188],
-  checkpoint: [37, 54, 57, 52],
-  crowdstrike: [17, 15, 13, 13],
+  fortinet: [277, 282, 284, 292],
+  cisco: [284, 296, 289, 291],
+  hpe: [107, 124, 106, 105],
+  paloalto: [274, 277, 296, 302],
+  checkpoint: [16, 29, 22, 24],
+  crowdstrike: [0, 0, 1, 1],
 };
 
 const AIO_DATA_INITIAL = {
@@ -243,8 +243,14 @@ export function SlideSDWANMetrics({ onNavigateHome }: { onNavigateHome?: () => v
             <ContextualInsightCard
               icon={TrendingUp}
               sentiment="positive"
-              headline="Solid Keyword Growth Momentum"
-              body="Fortinet demonstrates steady growth (175 → 196, +12%), while competitors show aggressive expansion—Check Point surges +75%, Cisco +24%—indicating intensifying SD-WAN market competition."
+              headline="Fortinet Keyword Growth"
+              body="Fortinet: 175 → 196 SD-WAN keywords, +12% (Oct-Jan)"
+            />
+            <ContextualInsightCard
+              icon={BarChart3}
+              sentiment="neutral"
+              headline="Cisco Leads Keywords"
+              body="Cisco: 314 SD-WAN keywords, +5.7% growth (Oct-Jan)"
             />
           </>
         );
@@ -252,10 +258,16 @@ export function SlideSDWANMetrics({ onNavigateHome }: { onNavigateHome?: () => v
         return (
           <>
             <ContextualInsightCard
-              icon={BarChart3}
+              icon={TrendingUp}
               sentiment="positive"
-              headline="Elite Page 1 Visibility"
-              body="Fortinet achieves 188 Page 1 rankings (96.1% visibility ratio), matching Palo Alto's 94.0% and significantly outperforming Cisco's 81.9%—demonstrates superior content quality in competitive SD-WAN space."
+              headline="Fortinet Page 1 Elite"
+              body="Fortinet: 188 Page 1, 96.1% ratio, top (Oct-Jan)"
+            />
+            <ContextualInsightCard
+              icon={Target}
+              sentiment="neutral"
+              headline="Cisco Volume Leader"
+              body="Cisco: 252 Page 1 rankings, +4.1% growth (Oct-Jan)"
             />
           </>
         );
@@ -265,11 +277,14 @@ export function SlideSDWANMetrics({ onNavigateHome }: { onNavigateHome?: () => v
             <ContextualInsightCard
               icon={Zap}
               sentiment="negative"
-              headline="Traffic Volatility Despite Growth"
-              body={[
-                "Fortinet shows volatility (11,031 → 10,015, -9.2%)—despite keyword expansion, traffic declined, suggesting need for content optimization.",
-                "Palo Alto demonstrates exceptional momentum (8,998 → 10,660, +18.5%), now approaching Fortinet's traffic levels. Check Point surges +67.7%—highly competitive SD-WAN landscape."
-              ]}
+              headline="Fortinet Traffic Decline"
+              body="Fortinet: 11K → 10K traffic, -9.2% drop (Oct-Jan)"
+            />
+            <ContextualInsightCard
+              icon={Zap}
+              sentiment="neutral"
+              headline="Palo Alto Steady Rise"
+              body="Palo Alto: Steady +18.5% to 10.7K traffic (Oct-Jan)"
             />
           </>
         );
@@ -279,8 +294,14 @@ export function SlideSDWANMetrics({ onNavigateHome }: { onNavigateHome?: () => v
             <ContextualInsightCard
               icon={Sparkles}
               sentiment="neutral"
-              headline="Stable AI Overview Presence"
-              body="Palo Alto leads (127 → 130) with Fortinet close behind (125 → 125). HPE shows strong growth (+44.7%), while category demonstrates growing AI Overview adoption across SD-WAN queries."
+              headline="Fortinet AI Stable"
+              body="Fortinet: 125 AI Overview keywords, stable (Nov-Jan)"
+            />
+            <ContextualInsightCard
+              icon={Sparkles}
+              sentiment="neutral"
+              headline="Palo Alto AI Growth"
+              body="Palo Alto: 127 → 130 AI keywords, +2.4% (Nov-Jan)"
             />
           </>
         );
@@ -337,9 +358,9 @@ export function SlideSDWANMetrics({ onNavigateHome }: { onNavigateHome?: () => v
   };
 
   return (
-    <SlideContainer slideNumber={9} onNavigateHome={onNavigateHome}>
+    <SlideContainer slideNumber={9} onNavigateHome={onNavigateHome} source="Ahrefs">
       <SlideHeader 
-        title="SD-WAN Category Performance" 
+        title="SD-WAN" 
         subtitle="(Oct 2025 - Jan 2026)"
       />
       
@@ -475,7 +496,7 @@ export function SlideSDWANMetrics({ onNavigateHome }: { onNavigateHome?: () => v
         </div>
       )}
 
-      <SlideFooter source="Source: Semrush" />
+      <SlideFooter source="Source: Ahrefs" />
     </SlideContainer>
   );
 }

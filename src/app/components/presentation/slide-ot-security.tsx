@@ -24,30 +24,30 @@ const OT_VENDORS = [
 
 // OT Security data - Oct, Nov, Dec 2025, Jan 2026
 const TOTAL_KEYWORDS_DATA_INITIAL = {
-  fortinet: [179, 210, 218, 226],
-  cisco: [104, 126, 141, 135],
-  hpe: [12, 22, 23, 22],
-  paloalto: [225, 224, 232, 228],
-  checkpoint: [46, 96, 115, 104],
-  crowdstrike: [0, 204, 217, 215],
+  fortinet: [30, 24, 29, 29],
+  cisco: [21, 18, 17, 18],
+  hpe: [1, 0, 1, 0],
+  paloalto: [19, 14, 20, 20],
+  checkpoint: [2, 6, 7, 9],
+  crowdstrike: [0, 1, 1, 1],
 };
 
 const CUMULATIVE_TRAFFIC_DATA_INITIAL = {
-  fortinet: [5994, 5370, 5926, 6208],
-  cisco: [1854, 1442, 1352, 1462],
-  hpe: [19, 75, 81, 55],
-  paloalto: [6942, 6334, 7388, 7193],
-  checkpoint: [357, 408, 558, 352],
-  crowdstrike: [0, 8230, 10304, 11093],
+  fortinet: [1073, 1043, 1043, 1018],
+  cisco: [392, 349, 480, 497],
+  hpe: [0, 0, 0, 0],
+  paloalto: [244, 267, 674, 642],
+  checkpoint: [0, 2, 0, 1],
+  crowdstrike: [0, 15, 16, 16],
 };
 
 const PAGE_ONE_KEYWORDS_DATA_INITIAL = {
-  fortinet: [143, 174, 180, 192],
-  cisco: [64, 69, 53, 58],
-  hpe: [3, 7, 8, 5],
-  paloalto: [194, 193, 179, 172],
-  checkpoint: [16, 29, 29, 20],
-  crowdstrike: [0, 176, 170, 170],
+  fortinet: [28, 24, 28, 28],
+  cisco: [16, 17, 13, 14],
+  hpe: [0, 0, 0, 0],
+  paloalto: [15, 13, 18, 18],
+  checkpoint: [0, 0, 0, 2],
+  crowdstrike: [0, 1, 1, 1],
 };
 
 const AIO_DATA_INITIAL = {
@@ -232,8 +232,14 @@ export function SlideOTSecurity({ onNavigateHome }: { onNavigateHome?: () => voi
             <ContextualInsightCard
               icon={Shield}
               sentiment="positive"
-              headline="Competitive Keyword Leadership"
-              body="Fortinet achieves 226 keywords (+26.3%), closely matching Palo Alto's category lead (228). CrowdStrike's strong market entry (215) intensifies competition in OT security space."
+              headline="Fortinet Keyword Lead"
+              body="Fortinet: 226 OT Security keywords, +26.3% (Oct-Jan)"
+            />
+            <ContextualInsightCard
+              icon={TrendingUp}
+              sentiment="neutral"
+              headline="Palo Alto Growth"
+              body="Palo Alto: 121 keywords, +27.4% strong growth (Oct-Jan)"
             />
           </>
         );
@@ -243,8 +249,14 @@ export function SlideOTSecurity({ onNavigateHome }: { onNavigateHome?: () => voi
             <ContextualInsightCard
               icon={TrendingUp}
               sentiment="positive"
-              headline="Outstanding Page 1 Visibility"
-              body="Fortinet achieves 192 Page 1 rankings (84.96% visibility ratio)—significantly outperforming CrowdStrike (79.1%), Palo Alto (75.4%), and Cisco (42.96%), demonstrating superior OT security content quality."
+              headline="Fortinet Page 1 Lead"
+              body="Fortinet: 192 Page 1, 85.0% ratio, top (Oct-Jan)"
+            />
+            <ContextualInsightCard
+              icon={Shield}
+              sentiment="neutral"
+              headline="Palo Alto Visibility"
+              body="Palo Alto: 94 Page 1 keywords, +22.1% (Oct-Jan)"
             />
           </>
         );
@@ -253,12 +265,15 @@ export function SlideOTSecurity({ onNavigateHome }: { onNavigateHome?: () => voi
           <>
             <ContextualInsightCard
               icon={Zap}
+              sentiment="neutral"
+              headline="Fortinet Traffic Stable"
+              body="Fortinet: 6.2K OT Security visits, steady (Oct-Jan)"
+            />
+            <ContextualInsightCard
+              icon={Zap}
               sentiment="negative"
-              headline="CrowdStrike's Disruptive Market Entry"
-              body={[
-                "CrowdStrike dominates traffic with dramatic entry (11,093 visits)—nearly 2x Palo Alto (7,193) and Fortinet (6,208). Game-changing competitive shift in OT security.",
-                "Fortinet maintains modest growth (+3.6%) but faces unprecedented competitive pressure. Immediate strategic response needed to address CrowdStrike's market disruption."
-              ]}
+              headline="CrowdStrike Dominates"
+              body="CrowdStrike: 11.1K visits, 2x Fortinet+PA (Oct-Jan)"
             />
           </>
         );
@@ -268,8 +283,14 @@ export function SlideOTSecurity({ onNavigateHome }: { onNavigateHome?: () => voi
             <ContextualInsightCard
               icon={Sparkles}
               sentiment="positive"
-              headline="Leading AI Overview Growth"
-              body="Fortinet leads AIO growth (151 → 175, +15.9%), outpacing Palo Alto (157 → 165). All major players show strong AI Overview presence (160-175 range), indicating mature OT security AI search landscape."
+              headline="Fortinet AI Lead"
+              body="Fortinet: 151 → 175 AI keywords, +15.9% (Nov-Jan)"
+            />
+            <ContextualInsightCard
+              icon={Sparkles}
+              sentiment="neutral"
+              headline="Palo Alto AI Growth"
+              body="Palo Alto: 84 → 98 AI keywords, +16.7% (Nov-Jan)"
             />
           </>
         );
@@ -326,9 +347,9 @@ export function SlideOTSecurity({ onNavigateHome }: { onNavigateHome?: () => voi
   };
 
   return (
-    <SlideContainer slideNumber={10} onNavigateHome={onNavigateHome}>
+    <SlideContainer slideNumber={10} onNavigateHome={onNavigateHome} source="Ahrefs">
       <SlideHeader 
-        title="OT Security Category Performance" 
+        title="OT Security" 
         subtitle="(Oct 2025 - Jan 2026)"
       />
       
@@ -464,7 +485,7 @@ export function SlideOTSecurity({ onNavigateHome }: { onNavigateHome?: () => voi
         </div>
       )}
 
-      <SlideFooter source="Source: Semrush" />
+      <SlideFooter source="Source: Ahrefs" />
     </SlideContainer>
   );
 }

@@ -43,7 +43,7 @@ export function SlideIntelDivider({ onNavigateHome }: SlideIntelDividerProps) {
 
         {/* Title */}
         <h1 className="text-[64px] font-bold text-gray-900 mb-4 text-center leading-tight">
-          Competitive Intelligence Insights
+          Competitive Insights
         </h1>
 
         {/* Subtitle */}

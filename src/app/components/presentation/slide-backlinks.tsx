@@ -163,16 +163,16 @@ export function SlideBacklinks({ onNavigateHome }: { onNavigateHome?: () => void
       return (
         <>
           <ContextualInsightCard
-            icon={Award}
-            sentiment="neutral"
-            headline="Cisco Domain Leadership"
-            body={`Cisco leads with ${formatNumber(ciscoReferring[3])} referring domains—focus on quality link acquisition to close the gap and build sustainable authority.`}
-          />
-          <ContextualInsightCard
             icon={TrendingDown}
             sentiment="negative"
             headline="Fortinet Domain Decline"
-            body="Fortinet's referring domains declined from 55.8K to 54.1K (-3.0%)—prioritize domain acquisition through partnerships and thought leadership content."
+            body="Fortinet: 55.8K → 54.1K domains, -3.0% (Oct-Jan)"
+          />
+          <ContextualInsightCard
+            icon={Award}
+            sentiment="neutral"
+            headline="Cisco Domain Lead"
+            body={`Cisco: ${formatNumber(ciscoReferring[3])} domains, leads (Oct-Jan)`}
           />
         </>
       );
@@ -182,14 +182,14 @@ export function SlideBacklinks({ onNavigateHome }: { onNavigateHome?: () => void
           <ContextualInsightCard
             icon={TrendingDown}
             sentiment="negative"
-            headline="Industry-Wide Decline"
-            body="All vendors show declining backlink trends—Cisco (46.7M), HPE (29.6M), Check Point (5.9M) all declining, indicating market-wide link building challenges."
+            headline="Fortinet Backlink Decline"
+            body="Fortinet: 16.6M → 16.3M backlinks, -1.7% (Oct-Jan)"
           />
           <ContextualInsightCard
             icon={Link}
-            sentiment="neutral"
-            headline="Strategic Link Building"
-            body="Prioritize high-authority partnerships, research publications, and thought leadership content to build sustainable backlink profile growth and domain authority."
+            sentiment="negative"
+            headline="Cisco Backlink Lead"
+            body="Cisco: 46.7M backlinks, industry decline (Oct-Jan)"
           />
         </>
       );

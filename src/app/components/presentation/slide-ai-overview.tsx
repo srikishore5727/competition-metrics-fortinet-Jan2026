@@ -24,8 +24,8 @@ const VENDORS = [
 ];
 
 const AIO_KEYWORDS_DATA_INITIAL = {
-  fortinet: [12365, 11938, 13486, 16613],
-  cisco: [4626, 5311, 15467, 14115],
+  fortinet: [12365, 11938, 13496, 16613],
+  cisco: [14365, 13811, 15462, 18133],
   hpe: [2784, 3257, 4993, 6155],
   paloalto: [4506, 4653, 5964, 7627],
   checkpoint: [2132, 2013, 1916, 1867],
@@ -160,14 +160,14 @@ export function SlideAIOverview({ onNavigateHome }: { onNavigateHome?: () => voi
           <ContextualInsightCard
             icon={Sparkles}
             sentiment="positive"
-            headline="Fortinet Leads Keywords"
-            body="Fortinet leads AI Overview keywords with 16.6K (Jan), showing +34.3% growth—strong AI search presence and relevance in emerging search landscape."
+            headline="Fortinet AI Growth"
+            body="Fortinet: 16.6K AI keywords, +34.3% growth (Oct-Jan)"
           />
           <ContextualInsightCard
             icon={BarChart3}
-            sentiment="neutral"
-            headline="Competitive Dynamics"
-            body="Cisco demonstrates volatile but strong performance (14.1K Jan), while Palo Alto grew steadily to 7.6K keywords—varied strategic approaches to AI content."
+            sentiment="negative"
+            headline="Cisco AI Keyword Lead"
+            body="Cisco: 18.1K AI keywords, +26.2%, leads (Oct-Jan)"
           />
         </>
       );
@@ -178,13 +178,13 @@ export function SlideAIOverview({ onNavigateHome }: { onNavigateHome?: () => voi
             icon={TrendingUp}
             sentiment="positive"
             headline="Fortinet Traffic Spike"
-            body="High traffic volatility indicates AI algorithm experimentation—Fortinet's Dec spike (275K) shows strong AI result placements and content optimization success."
+            body="Fortinet: Dec spike 275K AI traffic, volatile (Oct-Jan)"
           />
           <ContextualInsightCard
             icon={AlertTriangle}
             sentiment="negative"
-            headline="Algorithm Volatility"
-            body="Cisco maintains consistent high traffic (127K Jan), while Crowdstrike experienced dramatic decline (169K → 22K) requiring investigation into content changes."
+            headline="Cisco AI Traffic Lead"
+            body="Cisco: 127K AI traffic; CS drop 169K → 22K (Oct-Jan)"
           />
         </>
       );

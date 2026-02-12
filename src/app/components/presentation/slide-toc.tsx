@@ -9,30 +9,28 @@ interface TOCProps {
 export function SlideTOC({ onNavigate, onNavigateHome }: TOCProps) {
   const sections = [
     {
-      title: '1. Organic Traffic Overview',
+      title: '1. Organic Traffic Performance Overview',
       icon: TrendingUp,
       color: '#EF4444',
-      items: [
-        { label: 'Organic Traffic Overview (Tabbed)', slideIndex: 3 },
-      ],
+      slideIndex: 3, // Direct navigation
     },
     {
-      title: '2. Keyword Performance Metrics',
+      title: '2. Keyword Opportunities & Rankings',
       icon: Target,
       color: '#FF7AB6',
-      items: [{ label: 'Keyword Opportunities & Rankings', slideIndex: 6 }],
+      slideIndex: 5, // Direct navigation
     },
     {
-      title: '3. Category-Wise Competitive Performance',
+      title: '3. Category-Wise Performance',
       icon: BarChart3,
       color: '#7ED957',
       items: [
-        { label: 'NGFW / Firewall Category Performance', slideIndex: 8 },
-        { label: 'SD-WAN Category Performance', slideIndex: 9 },
-        { label: 'OT Security Category Performance', slideIndex: 10 },
-        { label: 'SASE Category Performance', slideIndex: 11 },
-        { label: 'Zero Trust Security Category Performance', slideIndex: 12 },
-        { label: 'Cloud Security Category Performance', slideIndex: 13 },
+        { label: 'NGFW / Firewall', slideIndex: 7 },
+        { label: 'SD-WAN', slideIndex: 8 },
+        { label: 'OT Security', slideIndex: 9 },
+        { label: 'SASE', slideIndex: 10 },
+        { label: 'Zero Trust Security', slideIndex: 11 },
+        { label: 'Cloud Security', slideIndex: 12 },
       ],
     },
     {
@@ -40,24 +38,24 @@ export function SlideTOC({ onNavigate, onNavigateHome }: TOCProps) {
       icon: Sparkles,
       color: '#FFB14A',
       items: [
-        { label: 'Overall LLM Metrics', slideIndex: 15 },
-        { label: 'Category-Wise LLM Metrics', slideIndex: 16 },
-        { label: 'AI Overview Metrics', slideIndex: 17 },
+        { label: 'LLM Metrics', slideIndex: 14 },
+        { label: 'Focused Category', slideIndex: 15 },
+        { label: 'AI Overview Metrics', slideIndex: 16 },
       ],
     },
     {
       title: '5. Backlink Competitive Analysis',
       icon: Link2,
       color: '#6C9AFF',
-      items: [{ label: 'Competition Backlink Performance', slideIndex: 19 }],
+      items: [{ label: 'Competition Backlink Performance', slideIndex: 18 }],
     },
     {
-      title: '6. Competitive Intelligence Insights',
+      title: '6. Competitive Insights',
       icon: Lightbulb,
       color: '#FF8E5A',
       items: [
-        { label: 'Fortinet – Competitive Intelligence Tips', slideIndex: 21 },
-        { label: 'Keyword Gap Analysis', slideIndex: 22 },
+        { label: 'Palo Alto - Content Gap', slideIndex: 20 },
+        { label: 'Keyword Gap Analysis', slideIndex: 21 },
       ],
     },
   ];
@@ -76,38 +74,54 @@ export function SlideTOC({ onNavigate, onNavigateHome }: TOCProps) {
           <div className="max-w-6xl mx-auto px-12 grid grid-cols-2 gap-6">
             {sections.map((section, idx) => {
               const Icon = section.icon;
+              const hasItems = section.items && section.items.length > 0;
+              const isDirectLink = section.slideIndex !== undefined;
+              
               return (
                 <div
                   key={idx}
-                  className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-all duration-200"
+                  className={`bg-white border border-gray-200 rounded-xl transition-all duration-200 ${
+                    isDirectLink ? 'hover:shadow-lg hover:border-gray-300 cursor-pointer p-5' : 'hover:shadow-lg p-5'
+                  } ${!hasItems && !isDirectLink ? 'p-5' : ''}`}
+                  onClick={isDirectLink ? () => onNavigate(section.slideIndex!) : undefined}
                 >
                   {/* Section Title */}
-                  <div className="flex items-center gap-3 mb-4 pb-3 border-b border-gray-200">
+                  <div className={`flex items-center gap-3 border-b border-gray-200 ${hasItems ? 'mb-4 pb-3' : 'pb-3'}`}>
                     <div
                       className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
                       style={{ backgroundColor: `${section.color}15` }}
                     >
                       <Icon className="w-5 h-5" style={{ color: section.color }} />
                     </div>
-                    <h3 className="text-base font-bold text-gray-900">{section.title}</h3>
+                    <h3 className="text-base font-bold text-gray-900 flex-1">{section.title}</h3>
+                    {isDirectLink && (
+                      <span className="text-xs text-gray-400 font-medium">
+                        Slide {section.slideIndex! + 1}
+                      </span>
+                    )}
                   </div>
 
                   {/* Items */}
-                  <div className="space-y-2">
-                    {section.items.map((item, itemIdx) => (
-                      <button
-                        key={itemIdx}
-                        onClick={() => onNavigate(item.slideIndex)}
-                        className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-all group"
-                      >
-                        <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-red-500 group-hover:translate-x-0.5 transition-all" />
-                        <span className="flex-1 font-medium">{item.label}</span>
-                        <span className="text-xs text-gray-400 font-medium">
-                          Slide {item.slideIndex + 1}
-                        </span>
-                      </button>
-                    ))}
-                  </div>
+                  {hasItems && (
+                   <div className="space-y-2">
+                     {section.items!.map((item, itemIdx) => (
+                       <button
+                         key={itemIdx}
+                         onClick={(e) => {
+                           e.stopPropagation();
+                           onNavigate(item.slideIndex);
+                         }}
+                         className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-all group"
+                       >
+                         <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-red-500 group-hover:translate-x-0.5 transition-all" />
+                         <span className="flex-1 font-medium">{item.label}</span>
+                         <span className="text-xs text-gray-400 font-medium">
+                           Slide {item.slideIndex + 1}
+                         </span>
+                       </button>
+                     ))}
+                   </div>
+                   )}
                 </div>
               );
             })}

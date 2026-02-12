@@ -325,7 +325,7 @@ export function SlideNGFWContextual() {
         </div>
       </div>
 
-      <SlideFooter source="Source: Semrush" />
+      <SlideFooter source="Source: Ahrefs" />
     </SlideContainer>
   );
 }

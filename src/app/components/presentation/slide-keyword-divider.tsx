@@ -43,7 +43,7 @@ export function SlideKeywordDivider({ onNavigateHome }: SlideKeywordDividerProps
 
         {/* Title */}
         <h1 className="text-[64px] font-bold text-gray-900 mb-4 text-center leading-tight">
-          Keyword Performance Metrics
+          Keyword Performance & Ranking Insights
         </h1>
 
         {/* Subtitle */}

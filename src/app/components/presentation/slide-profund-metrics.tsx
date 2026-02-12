@@ -24,7 +24,7 @@ const VENDORS = [
 ];
 
 const VISIBILITY_DATA_INITIAL = {
-  fortinet: [57.8, 62.1, 62.6],
+  fortinet: [57.3, 57.8, 57.7],
   paloalto: [40.9, 43.5, 43.5],
   checkpoint: [14.9, 15.8, 15.9],
   hpe: [1.6, 1.8, 2.1],
@@ -155,14 +155,14 @@ export function SlideProfundMetrics({ onNavigateHome }: { onNavigateHome?: () =>
             <ContextualInsightCard
               icon={Award}
               sentiment="positive"
-              headline="Fortinet Leads AI Visibility"
-              body="Fortinet leads AI visibility at 62.6% (+8.3% growth), outperforming all competitors in LLM presence—strong AI-first content strategy paying off."
+              headline="Fortinet AI Visibility"
+              body="Fortinet: 57.7% AI visibility, +0.7% lead (Nov-Jan)"
             />
             <ContextualInsightCard
               icon={Target}
               sentiment="neutral"
-              headline="Competitive Gap Analysis"
-              body="Palo Alto ranks #2 at 43.5%, 19.1 points behind Fortinet—significant competitive advantage in emerging AI search landscape for Fortinet to maintain."
+              headline="Palo Alto AI Gap"
+              body="Palo Alto: 43.5% visibility, -14.2pp behind (Nov-Jan)"
             />
           </>
         );
@@ -172,14 +172,14 @@ export function SlideProfundMetrics({ onNavigateHome }: { onNavigateHome?: () =>
             <ContextualInsightCard
               icon={Sparkles}
               sentiment="positive"
-              headline="Dominant Share of Voice"
-              body="Fortinet dominates AI share of voice at 10.0%, nearly 33% higher than Palo Alto's 7.5%—strong authority in LLM responses and content citations."
+              headline="Fortinet Voice Lead"
+              body="Fortinet: 10.0% Share of Voice, +33% vs PA (Nov-Jan)"
             />
             <ContextualInsightCard
               icon={TrendingDown}
               sentiment="neutral"
-              headline="Competitor Gaps"
-              body="Cisco shows steady 5.9% share, while HPE trails at 0.3%, indicating minimal AI platform presence and content gaps—opportunity for Fortinet to widen lead."
+              headline="Cisco Share of Voice"
+              body="Cisco: 5.9% Share of Voice, lower share (Nov-Jan)"
             />
           </>
         );
@@ -189,14 +189,14 @@ export function SlideProfundMetrics({ onNavigateHome }: { onNavigateHome?: () =>
             <ContextualInsightCard
               icon={Zap}
               sentiment="positive"
-              headline="Exceptional Citation Growth"
-              body="Fortinet's citation rate surged +34.8% (9.2% → 12.4%), massively outperforming competitors—strong content authority recognized by AI platforms."
+              headline="Fortinet Citation Surge"
+              body="Fortinet: 9.2% → 12.4% Citation, +34.8% (Nov-Jan)"
             />
             <ContextualInsightCard
               icon={TrendingDown}
               sentiment="negative"
-              headline="Competitor Decline"
-              body="All other vendors show declining or flat citation rates, with HPE dropping to 0.1%—major opportunity gap for Fortinet to maintain and extend leadership."
+              headline="Palo Alto Decline"
+              body="Palo Alto: Declining citation rate, behind (Nov-Jan)"
             />
           </>
         );
@@ -208,7 +208,7 @@ export function SlideProfundMetrics({ onNavigateHome }: { onNavigateHome?: () =>
   return (
     <SlideContainer slideNumber={15} onNavigateHome={onNavigateHome}>
       <SlideHeader 
-        title="Overall LLM Metrics" 
+        title="LLM Metrics" 
         subtitle="(Nov 2025 - Jan 2026)"
       />
 
@@ -352,7 +352,7 @@ export function SlideProfundMetrics({ onNavigateHome }: { onNavigateHome?: () =>
         </div>
       )}
 
-      <SlideFooter source="Source: Semrush" />
+      <SlideFooter source="Source: Profound" />
     </SlideContainer>
   );
 }

@@ -48,7 +48,7 @@ export function SlideCompetitiveIntel({ onNavigateHome }: { onNavigateHome?: () 
   return (
     <SlideContainer slideNumber={21} onNavigateHome={onNavigateHome}>
       <SlideHeader 
-        title="Fortinet – Competitive Intelligence Tips" 
+        title="Palo Alto - Content Gap" 
         subtitle="Key Insights & Strategic Actions"
       />
 

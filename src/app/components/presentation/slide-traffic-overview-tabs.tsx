@@ -185,12 +185,12 @@ export function SlideTrafficOverviewTabs({ onNavigateHome }: SlideTrafficOvervie
           <InsightCard
             icon={TrendingUp}
             type="success"
-            content="Fortinet demonstrates +6.7% traffic growth (4.5M → 4.8M) from Oct to Jan, showing steady momentum. This indicates effective content strategy and improving organic visibility in the competitive landscape."
+            content="Fortinet: +6.7% growth, 4.5M → 4.8M visits (Oct-Jan)"
           />
           <InsightCard
             icon={TrendingUp}
             type="info"
-            content="Cisco shows volatile traffic pattern with a massive spike in November (33.5M) before dropping to 4.5M by January. Crowdstrike experiences consistent decline (679K → 439K). Market presents opportunity for Fortinet to capture additional share."
+            content="Cisco: Volatile, 33.5M spike Nov; Crowdstrike: -35% to 439K (Oct-Jan)"
           />
         </InsightsSection>
       );
@@ -200,12 +200,12 @@ export function SlideTrafficOverviewTabs({ onNavigateHome }: SlideTrafficOvervie
           <InsightCard
             icon={TrendingUp}
             type="warning"
-            content="Fortinet Brand Search Decline: Branded traffic dropped -38.4% (878K → 541K), though it still represents 11.2% of total traffic—reinforcing brand awareness and thought leadership is critical."
+            content="Fortinet: Branded traffic -38.4%, 878K → 541K (Oct-Jan)"
           />
           <InsightCard
             icon={TrendingUp}
             type="info"
-            content="Cisco Leads But Eroding: Cisco maintains largest branded volume (1.51M) but faces -30.4% decline—presents opportunity for Fortinet to capture mindshare through strategic brand campaigns."
+            content="Cisco: Branded -30.4%, 2.17M → 1.51M visits (Oct-Jan)"
           />
         </InsightsSection>
       );
@@ -215,12 +215,12 @@ export function SlideTrafficOverviewTabs({ onNavigateHome }: SlideTrafficOvervie
           <InsightCard
             icon={TrendingUp}
             type="success"
-            content="Strong Non-Branded Growth: Fortinet achieves +18.2% non-branded growth (3.62M → 4.28M), demonstrating effective SEO and content strategy beyond brand recognition—critical for market expansion."
+            content="Fortinet: Non-branded +18.2%, 3.62M → 4.28M (Oct-Jan)"
           />
           <InsightCard
             icon={TrendingUp}
             type="warning"
-            content="Cisco Volatility Creates Opening: Despite Cisco's dominant position (29.6M in Jan), their erratic performance (+80.4% then -6.6% swings) signals instability—opportunity for Fortinet to capture consistent market share."
+            content="Cisco: Erratic non-branded, +80.4% then -6.6% swings (Oct-Jan)"
           />
         </InsightsSection>
       );
@@ -230,7 +230,7 @@ export function SlideTrafficOverviewTabs({ onNavigateHome }: SlideTrafficOvervie
   return (
     <SlideContainer slideNumber={3} onNavigateHome={onNavigateHome}>
       <SlideHeader
-        title="Organic Traffic Overview"
+        title="Organic Traffic Performance Overview"
         subtitle="(Oct 2025 - Jan 2026)"
       />
 

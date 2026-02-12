@@ -193,8 +193,14 @@ export function SlideNGFW({ onNavigateHome }: SlideNGFWProps) {
             <ContextualInsightCard
               icon={TrendingUp}
               sentiment="positive"
-              headline="NGFW Keyword Leadership"
-              body="Fortinet dominates with 998 keywords (+11.4% growth), outpacing all competitors. Palo Alto shows strong growth (+25%) reaching 909, but Fortinet maintains commanding lead of 89 keywords."
+              headline="Fortinet Keyword Lead"
+              body="Fortinet: 998 NGFW keywords, +11.4% growth (Oct-Jan)"
+            />
+            <ContextualInsightCard
+              icon={BarChart3}
+              sentiment="neutral"
+              headline="Palo Alto Strong Growth"
+              body="Palo Alto: 909 keywords, +25% growth rate (Oct-Jan)"
             />
           </>
         );
@@ -202,10 +208,16 @@ export function SlideNGFW({ onNavigateHome }: SlideNGFWProps) {
         return (
           <>
             <ContextualInsightCard
-              icon={BarChart3}
+              icon={TrendingUp}
               sentiment="positive"
-              headline="Elite Page 1 Visibility"
-              body="Fortinet achieves 879 Page 1 rankings (+11.5% growth), representing elite 88.1% visibility ratio. Outperforming Palo Alto's 83.6% and maintaining quality leadership in NGFW search results."
+              headline="Fortinet Page 1 Leader"
+              body="Fortinet: 879 Page 1, +11.5%, 88.1% ratio (Oct-Jan)"
+            />
+            <ContextualInsightCard
+              icon={BarChart3}
+              sentiment="neutral"
+              headline="Palo Alto Accelerating"
+              body="Palo Alto: 760 Page 1 rankings, +25% growth (Oct-Jan)"
             />
           </>
         );
@@ -214,12 +226,15 @@ export function SlideNGFW({ onNavigateHome }: SlideNGFWProps) {
           <>
             <ContextualInsightCard
               icon={Zap}
+              sentiment="positive"
+              headline="Fortinet Traffic Growth"
+              body="Fortinet: +33.6% to 30.9K NGFW traffic (Oct-Jan)"
+            />
+            <ContextualInsightCard
+              icon={Zap}
               sentiment="negative"
-              headline="Traffic Lead Under Pressure"
-              body={[
-                "Fortinet traffic grew +33.6% to 30.9K, maintaining category leadership. However, Cisco (+83.9%) and Palo Alto (+98.0%) accelerate faster—gap narrowing from 7.2K to 1.7K with Cisco.",
-                "Continued focus on high-traffic keywords critical to defend market position."
-              ]}
+              headline="Cisco Traffic Surge"
+              body="Cisco: +83.9% to 29.2K; Gap narrowed 7.2K→1.7K (Oct-Jan)"
             />
           </>
         );
@@ -229,8 +244,14 @@ export function SlideNGFW({ onNavigateHome }: SlideNGFWProps) {
             <ContextualInsightCard
               icon={Sparkles}
               sentiment="positive"
-              headline="AI Overview Dominance"
-              body="Fortinet leads AI Overview presence with 637 keywords (+8.3% growth from Nov), significantly ahead of Palo Alto's 587 and Cisco's 498—strong positioning in emerging AI search results."
+              headline="Fortinet AI Lead"
+              body="Fortinet: 637 AI Overview keywords, +8.3% (Nov-Jan)"
+            />
+            <ContextualInsightCard
+              icon={Sparkles}
+              sentiment="neutral"
+              headline="Palo Alto AI Growth"
+              body="Palo Alto: 587 AI Overview keywords, +18.4% (Nov-Jan)"
             />
           </>
         );
@@ -292,9 +313,9 @@ export function SlideNGFW({ onNavigateHome }: SlideNGFWProps) {
   };
 
   return (
-    <SlideContainer slideNumber={8} onNavigateHome={onNavigateHome}>
+    <SlideContainer slideNumber={8} onNavigateHome={onNavigateHome} source="Ahrefs">
       <SlideHeader
-        title="NGFW / Firewall Category Performance"
+        title="NGFW / Firewall"
         subtitle="(Oct 2025 - Jan 2026)"
       />
 
@@ -437,7 +458,7 @@ export function SlideNGFW({ onNavigateHome }: SlideNGFWProps) {
         </div>
       )}
 
-      <SlideFooter source="Source: Semrush" />
+      <SlideFooter source="Source: Ahrefs" />
     </SlideContainer>
   );
 }

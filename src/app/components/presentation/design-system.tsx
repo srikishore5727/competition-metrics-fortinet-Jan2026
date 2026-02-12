@@ -97,9 +97,16 @@ interface SlideContainerProps {
   slideNumber?: number;
   totalSlides?: number;
   onNavigateHome?: () => void;
+  source?: string;
 }
 
-export function SlideContainer({ children, slideNumber, totalSlides = 19, onNavigateHome }: SlideContainerProps) {
+export function SlideContainer({ 
+  children, 
+  slideNumber, 
+  totalSlides = 19, 
+  onNavigateHome,
+  source = "Semrush"
+}: SlideContainerProps) {
   // Determine if this is the cover (0), TOC (1), or last slide (22)
   const isSpecialSlide = slideNumber === 0 || slideNumber === 1 || slideNumber === 22;
   
@@ -117,7 +124,7 @@ export function SlideContainer({ children, slideNumber, totalSlides = 19, onNavi
               <Home size={18} />
             </button>
             <div className="text-[10px] text-gray-500 whitespace-nowrap">
-              Source: Semrush
+              Source: {slideNumber === 14 ? "Semrush & Profound" : (slideNumber === 15 || slideNumber === 16 ? "Profound" : source)}
             </div>
           </div>
         )}
@@ -363,9 +370,7 @@ export function SlideFooter({ source = '' }: SlideFooterProps) {
   
   return (
     <div className="absolute bottom-12 left-12 z-10">
-      <div className="text-xs text-gray-500">
-        {source}
-      </div>
+
     </div>
   );
 }

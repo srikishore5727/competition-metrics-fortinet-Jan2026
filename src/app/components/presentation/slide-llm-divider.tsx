@@ -1,5 +1,5 @@
 import { Sparkles, Cpu, Eye, BarChart4 } from 'lucide-react';
-import { SlideContainer } from './design-system';
+import { SlideContainer, SlideFooter } from './design-system';
 
 interface SlideLLMDividerProps {
   onNavigateHome?: () => void;
@@ -8,7 +8,7 @@ interface SlideLLMDividerProps {
 export function SlideLLMDivider({ onNavigateHome }: SlideLLMDividerProps) {
   const sections = [
     { 
-      name: 'Overall LLM Metrics', 
+      name: 'LLM Metrics', 
       color: '#EF4444', 
       icon: Cpu,
       description: 'Aggregate AI visibility scores'
@@ -105,6 +105,8 @@ export function SlideLLMDivider({ onNavigateHome }: SlideLLMDividerProps) {
           <div className="h-px w-16 bg-gradient-to-l from-transparent to-gray-300" />
         </div>
       </div>
+      
+      <SlideFooter source="Source: Semrush & Profound" />
     </SlideContainer>
   );
 }

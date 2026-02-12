@@ -264,14 +264,14 @@ export function SlideOpportunities({ onNavigateHome }: SlideOpportunitiesProps) 
           <ContextualInsightCard
             icon={TrendingUp}
             sentiment="positive"
-            headline="Fortinet's Strong Growth"
-            body="Fortinet demonstrates +13.9% keyword growth (296K → 337K Oct-Jan), showing strong content momentum and improving organic visibility—second-best growth rate after HPE (+17.3%)."
+            headline="Fortinet Keyword Growth"
+            body="Fortinet: +13.9% keywords, 296K → 337K (Oct-Jan)"
           />
           <ContextualInsightCard
             icon={BarChart3}
             sentiment="neutral"
-            headline="Cisco's Market Position"
-            body="Cisco maintains highest volume at 734K keywords (+1.4% growth)—opportunity for Fortinet to gain market share through aggressive content expansion while Cisco shows minimal growth."
+            headline="Cisco Minimal Growth"
+            body="Cisco: 734K keywords, +1.4% growth only (Oct-Jan)"
           />
         </>
       );
@@ -281,14 +281,14 @@ export function SlideOpportunities({ onNavigateHome }: SlideOpportunitiesProps) 
           <ContextualInsightCard
             icon={Award}
             sentiment="positive"
-            headline="Best-in-Class Conversion"
-            body="Fortinet achieves 45K Page 1 keywords (+7.1% growth), representing 13.4% conversion rate—highest efficiency among all competitors in Jan, indicating superior content quality."
+            headline="Fortinet Best Conversion"
+            body="Fortinet: 45K Page 1, +7.1%, 13.4% ratio (Oct-Jan)"
           />
           <ContextualInsightCard
             icon={Target}
             sentiment="neutral"
-            headline="Cisco Leads Volume"
-            body="Cisco leads absolute Page 1 volume (89K, +2.3% growth) but Fortinet's higher conversion rate suggests better content relevance and potential to capture more high-value keywords."
+            headline="Cisco Volume Leader"
+            body="Cisco: 89K Page 1 rankings, +2.3% growth (Oct-Jan)"
           />
         </>
       );

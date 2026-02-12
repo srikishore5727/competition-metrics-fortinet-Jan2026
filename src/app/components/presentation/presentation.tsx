@@ -26,7 +26,7 @@ import { SlideThankYou } from './slide-thank-you';
 export function Presentation() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-   const goToNextSlide = () => {
+  const goToNextSlide = () => {
     setCurrentSlide((prev) => {
       if (prev < 22) return prev + 1;
       return prev;
@@ -84,7 +84,6 @@ export function Presentation() {
   return () => window.removeEventListener("message", handleMessage);
 }, []);
 
-
   const slides = [
     <SlideCover onNavigateHome={goToHome} />,
     <SlideTOC onNavigate={(index) => setCurrentSlide(index)} onNavigateHome={goToHome} />,
@@ -92,7 +91,7 @@ export function Presentation() {
     <SlideTrafficOverviewTabs onNavigateHome={goToHome} />,
     <SlideKeywordDivider onNavigateHome={goToHome} />,
     <SlideOpportunities onNavigateHome={goToHome} />,
-    <SlideCategoryDivider onNavigateHome={goToHome} />,
+    <SlideCategoryDivider onNavigateHome={goToHome} onNavigate={(index) => setCurrentSlide(index)} />,
     <SlideNGFW onNavigateHome={goToHome} />,
     <SlideSDWANMetrics onNavigateHome={goToHome} />,
     <SlideOTSecurity onNavigateHome={goToHome} />,

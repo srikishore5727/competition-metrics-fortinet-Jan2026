@@ -37,7 +37,7 @@ export function SlideTrafficOverviewDivider({ onNavigateHome }: SlideTrafficOver
 
         {/* Title */}
         <h1 className="text-[64px] font-bold text-gray-900 mb-4 text-center leading-tight">
-          Organic Traffic Overview
+          Organic Traffic Performance Overview
         </h1>
 
         {/* Subtitle */}

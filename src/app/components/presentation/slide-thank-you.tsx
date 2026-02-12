@@ -127,17 +127,6 @@ export function SlideThankYou() {
           </motion.h1>
         </motion.div>
 
-        {/* Subtitle */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
-          <p className="text-2xl text-gray-700 font-medium mb-8">
-            SEO Competitive Analysis Report
-          </p>
-        </motion.div>
-
         {/* Secure Badge */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}

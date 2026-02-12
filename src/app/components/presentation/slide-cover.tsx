@@ -8,11 +8,11 @@ export function SlideCover({ onNavigateHome }: SlideCoverProps) {
       <div className="max-w-4xl mx-auto text-center">
         {/* Main Title */}
         <div className="mb-6">
-          <div className="inline-block px-4 py-2 bg-red-500 text-white text-sm font-semibold rounded-lg mb-8">
-            COMPETITIVE ANALYSYIS FOR FORTINET - JAN 2026
+          <div className="inline-block px-8 py-3 bg-blue-600 text-white text-2xl font-bold rounded-xl mb-8">
+            SEO & AI VISIBILITY
           </div>
-          <h1 className="text-[56px] font-bold text-gray-900 leading-tight tracking-tight mb-4">
-            SEO & AI Visibility
+          <h1 className="text-[44px] font-bold text-black leading-tight tracking-tight mb-4 uppercase">
+            Competitive Analysis for Fortinet - Jan 2026
           </h1>
         </div>
 

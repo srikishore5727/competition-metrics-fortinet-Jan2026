@@ -3,20 +3,21 @@ import { SlideContainer, TEXT_STYLES } from './design-system';
 
 interface SlideCategoryDividerProps {
   onNavigateHome?: () => void;
+  onNavigate?: (slideIndex: number) => void;
 }
 
-export function SlideCategoryDivider({ onNavigateHome }: SlideCategoryDividerProps) {
+export function SlideCategoryDivider({ onNavigateHome, onNavigate }: SlideCategoryDividerProps) {
   const categories = [
-    { name: 'NGFW / Firewall', color: '#EF4444', icon: Shield },
-    { name: 'SD-WAN', color: '#FF7AB6', icon: Network },
-    { name: 'OT Security', color: '#7ED957', icon: Shield },
-    { name: 'SASE', color: '#FFB14A', icon: Cloud },
-    { name: 'Zero Trust', color: '#6C9AFF', icon: Lock },
-    { name: 'Cloud Security', color: '#1F2937', icon: Cloud },
+    { name: 'NGFW / Firewall', color: '#EF4444', icon: Shield, slideIndex: 7 },
+    { name: 'SD-WAN', color: '#FF7AB6', icon: Network, slideIndex: 8 },
+    { name: 'OT Security', color: '#7ED957', icon: Shield, slideIndex: 9 },
+    { name: 'SASE', color: '#FFB14A', icon: Cloud, slideIndex: 10 },
+    { name: 'Zero Trust', color: '#6C9AFF', icon: Lock, slideIndex: 11 },
+    { name: 'Cloud Security', color: '#1F2937', icon: Cloud, slideIndex: 12 },
   ];
 
   return (
-    <SlideContainer slideNumber={7} onNavigateHome={onNavigateHome}>
+    <SlideContainer slideNumber={7} onNavigateHome={onNavigateHome} source="Ahrefs">
       <div className="flex-1 flex flex-col justify-center items-center px-12">
         {/* Decorative Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -31,7 +32,7 @@ export function SlideCategoryDivider({ onNavigateHome }: SlideCategoryDividerPro
 
         {/* Title */}
         <h1 className="text-[64px] font-bold text-gray-900 mb-4 text-center leading-tight">
-          Category-Wise Competitive Performance
+          Category-Wise Performance
         </h1>
 
         {/* Subtitle */}
@@ -46,7 +47,8 @@ export function SlideCategoryDivider({ onNavigateHome }: SlideCategoryDividerPro
             return (
               <div
                 key={index}
-                className="group relative bg-white border-2 border-gray-200 rounded-2xl p-6 hover:border-gray-300 hover:shadow-xl transition-all duration-300"
+                className="group relative bg-white border-2 border-gray-200 rounded-2xl p-6 hover:border-gray-300 hover:shadow-xl transition-all duration-300 cursor-pointer"
+                onClick={() => onNavigate && onNavigate(category.slideIndex)}
               >
                 {/* Category Icon */}
                 <div

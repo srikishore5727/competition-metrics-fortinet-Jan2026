@@ -24,20 +24,20 @@ const categories = [
     topPerformer: 'Palo Alto',
     topPerformerColor: '#FFB14A',
     data: [
-      { period: 'Nov Wk4', fortinet: 86.3, top: 92.6 },
-      { period: 'Dec Wk4', fortinet: 89.6, top: 94.7 },
-      { period: 'Feb Wk5', fortinet: 90.9, top: 95.3 },
+      { period: 'Nov 2025', fortinet: 86.3, top: 92.6 },
+      { period: 'Dec 2025', fortinet: 89.6, top: 94.7 },
+      { period: 'Jan 2026', fortinet: 90.5, top: 96.8 },
     ],
     insights: [
       {
         icon: TrendingUp,
         type: 'neutral' as const,
-        content: 'Fortinet shows consistent growth from 86.3% to 90.9%, narrowing the gap with Palo Alto from 6.3 to 4.4 percentage points.',
+        content: 'Fortinet: 86.3% → 90.5%, +4.2pp SASE progress (Nov-Jan)',
       },
       {
         icon: Target,
         type: 'negative' as const,
-        content: 'Still trails Palo Alto by 4.4% in Feb Wk5. Requires sustained content optimization to close competitive gap in SASE category.',
+        content: 'Palo Alto: 96.8%, trails Fortinet by 6.3pp (Nov-Jan)',
       },
     ],
   },
@@ -47,20 +47,20 @@ const categories = [
     topPerformer: 'Fortinet',
     topPerformerColor: '#EF4444',
     data: [
-      { period: 'Nov Wk4', fortinet: 86.8, top: 86.8 },
-      { period: 'Dec Wk4', fortinet: 90.3, top: 90.3 },
-      { period: 'Feb Wk5', fortinet: 91.4, top: 91.4 },
+      { period: 'Nov 2025', fortinet: 86.8, top: 86.8, paloAlto: 60.3 },
+      { period: 'Dec 2025', fortinet: 90.3, top: 90.3, paloAlto: 59.2 },
+      { period: 'Jan 2026', fortinet: 91.3, top: 91.3, paloAlto: 69.8 },
     ],
     insights: [
       {
         icon: Award,
         type: 'positive' as const,
-        content: 'Fortinet is the undisputed leader in OT Security, achieving 91.4% visibility score with steady growth trajectory throughout the period.',
+        content: 'Fortinet: 91.3%, +4.5pp OT Security lead (Nov-Jan)',
       },
       {
         icon: TrendingUp,
         type: 'positive' as const,
-        content: 'Strong market positioning with 4.6-point improvement from Nov to Feb. No competitive threat—maintain content leadership in this category.',
+        content: 'Palo Alto: 69.8%, 21.5pp behind Fortinet (Nov-Jan)',
       },
     ],
   },
@@ -70,20 +70,20 @@ const categories = [
     topPerformer: 'Palo Alto',
     topPerformerColor: '#FFB14A',
     data: [
-      { period: 'Nov Wk4', fortinet: 67.4, top: 88.4 },
-      { period: 'Dec Wk4', fortinet: 75.4, top: 93.9 },
-      { period: 'Feb Wk5', fortinet: 74.1, top: 90.3 },
+      { period: 'Nov 2025', fortinet: 67.4, top: 88.4 },
+      { period: 'Dec 2025', fortinet: 75.4, top: 93.9 },
+      { period: 'Jan 2026', fortinet: 74.1, top: 90.3 },
     ],
     insights: [
       {
         icon: AlertTriangle,
         type: 'negative' as const,
-        content: 'Improved from 67.4% to 75.4% in Dec, but declined to 74.1% by Feb. Palo Alto maintains 16.2-point lead in Zero Trust Network Access.',
+        content: 'Fortinet: 67.4% → 74.1%, +6.7pp ZTNA growth (Nov-Jan)',
       },
       {
         icon: TrendingDown,
         type: 'negative' as const,
-        content: 'Recent decline suggests content momentum loss. Critical area requiring immediate attention to regain upward trajectory and close gap with PA.',
+        content: 'Palo Alto: 90.3%, leads by 16.2pp, gap (Nov-Jan)',
       },
     ],
   },
@@ -93,43 +93,43 @@ const categories = [
     topPerformer: 'Palo Alto',
     topPerformerColor: '#FFB14A',
     data: [
-      { period: 'Nov Wk4', fortinet: 52.0, top: 96.3 },
-      { period: 'Dec Wk4', fortinet: 60.9, top: 92.9 },
-      { period: 'Feb Wk5', fortinet: 64.4, top: 90.6 },
+      { period: 'Nov 2025', fortinet: 52.0, top: 96.3 },
+      { period: 'Dec 2025', fortinet: 60.9, top: 92.9 },
+      { period: 'Jan 2026', fortinet: 64.4, top: 90.6 },
     ],
     insights: [
       {
         icon: TrendingUp,
         type: 'neutral' as const,
-        content: 'Positive growth trend from 52.0% to 64.4% (12.4-point improvement), showing content strategy is gaining traction in cloud security space.',
+        content: 'Fortinet: 52.0% → 64.4%, +12.4pp Cloud progress (Nov-Jan)',
       },
       {
         icon: AlertTriangle,
         type: 'negative' as const,
-        content: 'Still 26.2 points behind Palo Alto despite growth. Largest competitive gap requiring aggressive content investment to reach parity.',
+        content: 'Palo Alto: 90.6%, 26.2pp ahead, large gap (Nov-Jan)',
       },
     ],
   },
   {
     id: 'secOps' as CategoryType,
     name: 'SecOps',
-    topPerformer: 'Cisco',
-    topPerformerColor: '#FF7AB6',
+    topPerformer: 'Palo Alto',
+    topPerformerColor: '#FFB14A',
     data: [
-      { period: 'Nov Wk4', fortinet: 23.8, top: 58.5 },
-      { period: 'Dec Wk4', fortinet: 16.4, top: 63.2 },
-      { period: 'Feb Wk5', fortinet: 18.7, top: 58.6 },
+      { period: 'Nov 2025', fortinet: 23.8, top: 51.4 },
+      { period: 'Dec 2025', fortinet: 16.4, top: 49.9 },
+      { period: 'Jan 2026', fortinet: 17.3, top: 47.9 },
     ],
     insights: [
       {
         icon: AlertTriangle,
         type: 'negative' as const,
-        content: 'Lowest performing category at 18.7% with volatile performance (23.8% → 16.4% → 18.7%). Cisco leads with 39.9-point advantage.',
+        content: '17.3%, volatile 23.8% → 16.4% (Nov-Jan)',
       },
       {
         icon: Target,
         type: 'negative' as const,
-        content: 'SecOps requires fundamental content strategy overhaul. Critical opportunity gap—consider strategic partnerships or major content initiatives.',
+        content: 'PA leads 30.6pp; strategy overhaul needed',
       },
     ],
   },
@@ -163,16 +163,23 @@ export function SlideCategoryPerformance({ onNavigateHome }: { onNavigateHome?: 
   const activeCategory = categories.find(cat => cat.id === activeTab)!;
   const isFortinetTopPerformer = activeCategory.topPerformer === 'Fortinet';
   
-  const chartData = activeCategory.data.map((item) => ({
-    period: item.period,
-    Fortinet: item.fortinet,
-    [activeCategory.topPerformer]: item.top,
-  }));
+  const chartData = activeCategory.data.map((item: any) => {
+    const dataPoint: any = {
+      period: item.period,
+      Fortinet: item.fortinet,
+      [activeCategory.topPerformer]: item.top,
+    };
+    // Add Palo Alto data for OT Security
+    if (activeTab === 'otSecurity' && item.paloAlto !== undefined) {
+      dataPoint['Palo Alto'] = item.paloAlto;
+    }
+    return dataPoint;
+  });
 
   return (
     <SlideContainer slideNumber={16} onNavigateHome={onNavigateHome}>
       <SlideHeader 
-        title="Category-Wise LLM Metrics" 
+        title="Focused Category" 
         subtitle="(Nov 2025 - Jan 2026)"
       />
 
@@ -250,12 +257,22 @@ export function SlideCategoryPerformance({ onNavigateHome }: { onNavigateHome?: 
                         formatter={(value: any) => `${value.toFixed(1)}%`}
                       />
                       {isFortinetTopPerformer ? (
-                        <Bar
-                          dataKey="Fortinet"
-                          fill="#EF4444"
-                          radius={[4, 4, 0, 0]}
-                          label={renderCustomLabel}
-                        />
+                        <>
+                          <Bar
+                            dataKey="Fortinet"
+                            fill="#EF4444"
+                            radius={[4, 4, 0, 0]}
+                            label={renderCustomLabel}
+                          />
+                          {activeTab === 'otSecurity' && (
+                            <Bar
+                              dataKey="Palo Alto"
+                              fill="#FFB14A"
+                              radius={[4, 4, 0, 0]}
+                              label={renderCustomLabel}
+                            />
+                          )}
+                        </>
                       ) : (
                         <>
                           <Bar
@@ -304,7 +321,7 @@ export function SlideCategoryPerformance({ onNavigateHome }: { onNavigateHome?: 
               />
               <span className="font-semibold text-gray-900">Palo Alto</span>
               <span className="text-gray-500">·</span>
-              <span className="text-gray-600">SASE, ZTNA, Cloud Security</span>
+              <span className="text-gray-600">SASE, ZTNA, Cloud Security, SecOps</span>
             </div>
             <div className="flex items-center gap-2">
               <div 
@@ -315,20 +332,11 @@ export function SlideCategoryPerformance({ onNavigateHome }: { onNavigateHome?: 
               <span className="text-gray-500">·</span>
               <span className="text-gray-600">OT Security</span>
             </div>
-            <div className="flex items-center gap-2">
-              <div 
-                className="w-3 h-3 rounded-sm" 
-                style={{ backgroundColor: '#FF7AB6' }}
-              />
-              <span className="font-semibold text-gray-900">Cisco</span>
-              <span className="text-gray-500">·</span>
-              <span className="text-gray-600">SecOps</span>
-            </div>
           </div>
         </div>
       </div>
 
-      <SlideFooter source="Source: Semrush" />
+      <SlideFooter source="Source: Profound" />
     </SlideContainer>
   );
 }
