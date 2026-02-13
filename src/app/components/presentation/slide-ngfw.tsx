@@ -225,24 +225,24 @@ export function SlideNGFW({ onNavigateHome }: SlideNGFWProps) {
         return (
           <>
             <ContextualInsightCard
-              icon={Zap}
+              icon={TrendingUp}
               sentiment="positive"
               headline="Fortinet"
               body="Steady growth and increase by 33.6%"
             />
-            {/* <ContextualInsightCard
+            <ContextualInsightCard
               icon={Zap}
-              sentiment="negative"
-              headline="Cisco Traffic Surge"
-              body="+83.9% to 29.2K; Gap narrowed 7.2K→1.7K (Oct-Jan)"
-            /> */}
+              sentiment="positive"
+              headline="Fortinet is leading than competitions"
+              // body="+83.9% to 29.2K; Gap narrowed 7.2K→1.7K (Oct-Jan)"
+            />
           </>
         );
       case 'aio':
         return (
           <>
             <ContextualInsightCard
-              icon={Sparkles}
+              icon={TrendingUp}
               sentiment="positive"
               headline="Fortinet"
               body="Top player with 11.4% increase"
@@ -370,9 +370,9 @@ export function SlideNGFW({ onNavigateHome }: SlideNGFWProps) {
             </div>
 
             {/* Insights Section - 4 columns */}
-            {/* <div className="col-span-4 flex flex-col gap-4">
+            <div className="col-span-4 flex flex-col gap-4">
               {getInsights()}
-            </div> */}
+            </div>
           </div>
 
           {/* Executive Note */}
