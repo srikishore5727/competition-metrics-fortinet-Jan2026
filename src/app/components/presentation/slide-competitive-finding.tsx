@@ -105,7 +105,7 @@ export function SlideCompetitiveFindings({ onNavigateHome }: { onNavigateHome?: 
   return (
     <SlideContainer slideNumber={23} onNavigateHome={onNavigateHome} source="">
       <SlideHeader 
-        title="Competition Website Findings" 
+        title="Web Experience" 
         subtitle="Strategic Observations from Competitor Websites"
       />
       

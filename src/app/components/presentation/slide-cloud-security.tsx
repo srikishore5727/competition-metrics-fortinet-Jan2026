@@ -1,6 +1,6 @@
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { useState } from 'react';
-import { Shield, TrendingUp, Zap, Sparkles } from 'lucide-react';
+import { Shield, TrendingUp, Zap, Sparkles, Info, TrendingDown } from 'lucide-react';
 import { formatChartAxisNumber } from '@/app/utils/format';
 import {
   SlideContainer,
@@ -231,16 +231,30 @@ export function SlideCloudSecurity({ onNavigateHome }: { onNavigateHome?: () => 
         return (
           <>
             <ContextualInsightCard
-              icon={Shield}
+              icon={TrendingUp}
               sentiment="positive"
-              headline="Fortinet Keyword Growth"
-              body="375 Cloud keywords, +16.1% growth (Oct-Jan)"
+              headline="CrowdStrike"
+              body="Leading but saw a ~4% dip by January 2026."
             />
             <ContextualInsightCard
-              icon={Shield}
-              sentiment="negative"
-              headline="Palo Alto Leads"
-              body="728 keywords, +24.4%, ahead (Oct-Jan)"
+              icon={Info}
+              sentiment="neutral"
+              headline="Fortinet"
+              body="Grew from 231 to 275 in four months, but fell 5% in Jan 2026 from Dec 2025."
+            />
+            <ContextualInsightCard
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="Palo Alto"
+              body="Ranks second and grew by ~18% from Oct to Jan."
+            />
+            <ContextualInsightCard
+              icon={
+                TrendingUp
+              }
+              sentiment="positive"
+              headline="Cisco"
+              body="Showed strong momentum with ~24% growth over the period."
             />
           </>
         );
@@ -248,16 +262,22 @@ export function SlideCloudSecurity({ onNavigateHome }: { onNavigateHome?: () => 
         return (
           <>
             <ContextualInsightCard
-              icon={TrendingUp}
-              sentiment="neutral"
-              headline="Fortinet Visibility"
-              body="181 Page 1, 48.3% ratio, gap (Oct-Jan)"
+              icon={TrendingDown}
+              sentiment="negative"
+              headline="CrowdStrike"
+              body="Leading in Page-1 keywords but saw a ~21% drop by January 2026."
             />
             <ContextualInsightCard
               icon={TrendingUp}
+              sentiment="positive"
+              headline="Fortinet"
+              body="Ranks second and showed growth (~6%) over the period."
+            />
+            <ContextualInsightCard
+              icon={TrendingDown}
               sentiment="negative"
-              headline="Palo Alto Page 1 Lead"
-              body="565 Page 1, 77.6% ratio, strong (Oct-Jan)"
+              // headline="Fortinet Visibility"
+              body="CheckPoint saw the steepest decline, dropping ~51% from Oct to Jan."
             />
           </>
         );
@@ -265,16 +285,22 @@ export function SlideCloudSecurity({ onNavigateHome }: { onNavigateHome?: () => 
         return (
           <>
             <ContextualInsightCard
-              icon={Zap}
+              icon={TrendingUp}
               sentiment="positive"
-              headline="Fortinet Traffic Surge"
-              body="40.7K Cloud traffic, +292% Dec surge (Oct-Jan)"
+              headline="Palo Alto"
+              body="Leading by a wide margin and surged by ~628% by January 2026."
             />
             <ContextualInsightCard
-              icon={Zap}
-              sentiment="neutral"
-              headline="PA Traffic Behind"
-              body="5.1K traffic, far behind Fortinet (Oct-Jan)"
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="CrowdStrike"
+              body="Ranks second with a growth of ~2.8X during Nov25 - Jan 26"
+            />
+            <ContextualInsightCard
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="Fortinet"
+              body="Also saw strong traction, growing ~250% from Oct to Jan."
             />
           </>
         );
@@ -282,16 +308,22 @@ export function SlideCloudSecurity({ onNavigateHome }: { onNavigateHome?: () => 
         return (
           <>
             <ContextualInsightCard
-              icon={Sparkles}
-              sentiment="neutral"
-              headline="Fortinet AI Presence"
-              body="237 Cloud AI keywords, competitive (Nov-Jan)"
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="CrowdStrike"
+              body="Leading in AIO and grew by ~22% by January 2026."
             />
             <ContextualInsightCard
-              icon={Sparkles}
-              sentiment="negative"
-              headline="Palo Alto AI Lead"
-              body="543 AI keywords, dominant lead (Nov-Jan)"
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="Palo Alto"
+              body="Ranks second and showed the strongest growth (~33%)"
+            />
+            <ContextualInsightCard
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="Fortinet"
+              body="Also posted strong gains with ~26% growth over the period."
             />
           </>
         );
@@ -405,9 +437,9 @@ export function SlideCloudSecurity({ onNavigateHome }: { onNavigateHome?: () => 
             </div>
 
             {/* Insights Section - 4 columns */}
-            {/* <div className="col-span-4 flex flex-col gap-4">
+            <div className="col-span-4 flex flex-col gap-4">
               {getInsights()}
-            </div> */}
+            </div>
           </div>
         </div>
       ) : (

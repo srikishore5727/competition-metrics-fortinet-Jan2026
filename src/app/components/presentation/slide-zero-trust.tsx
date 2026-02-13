@@ -1,6 +1,6 @@
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { useState } from 'react';
-import { Shield, TrendingUp, AlertTriangle, Sparkles, Zap } from 'lucide-react';
+import { Shield, TrendingUp, AlertTriangle, Sparkles, Zap, Target, TrendingDown, Info } from 'lucide-react';
 import { formatChartAxisNumber } from '@/app/utils/format';
 import {
   SlideContainer,
@@ -232,33 +232,45 @@ export function SlideZeroTrust({ onNavigateHome }: { onNavigateHome?: () => void
         return (
           <>
             <ContextualInsightCard
-              icon={TrendingUp}
-              sentiment="positive"
-              headline="Fortinet Keyword Lead"
-              body="226 Zero Trust keywords, +27% (Oct-Jan)"
+              icon={Target}
+              sentiment="neutral"
+              // headline="Fortinet Keyword Lead"
+              body="In Jan 2026, Palo Alto leads with 228 keywords, and Fortinet follows closely with 226."
             />
             <ContextualInsightCard
-              icon={Shield}
-              sentiment="neutral"
-              headline="Palo Alto Growth"
-              body="188 keywords, +32% strong growth (Oct-Jan)"
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="Fortinet"
+              body=" +27.0% growth from 178 to 226 (Oct–Jan)"
+            />
+            <ContextualInsightCard
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="Cisco"
+              body="+27.4% growth from 106 to 135 (Oct–Jan)"
             />
           </>
         );
       case 'page-one':
         return (
           <>
-            <ContextualInsightCard
-              icon={Shield}
-              sentiment="positive"
-              headline="Fortinet Page 1 Lead"
-              body="206 Page 1, 91.2% ratio, top (Oct-Jan)"
+           <ContextualInsightCard
+              icon={TrendingDown}
+              sentiment="negative"
+              headline="Palo Alto"
+              body="Leading but saw a ~11% drop in January 2026."
             />
             <ContextualInsightCard
               icon={TrendingUp}
-              sentiment="neutral"
-              headline="Palo Alto Visibility"
-              body="169 Page 1 rankings, 89.9% ratio (Oct-Jan)"
+              sentiment="positive"
+              headline="Fortinet"
+              body="Ranks second and grew by ~34% from Oct to Jan."
+            />
+            <ContextualInsightCard
+              icon={Target}
+              sentiment="negative"
+              headline="Cisco"
+              body="Declined by ~9% over the same period."
             />
           </>
         );
@@ -266,16 +278,22 @@ export function SlideZeroTrust({ onNavigateHome }: { onNavigateHome?: () => void
         return (
           <>
             <ContextualInsightCard
-              icon={Zap}
+              icon={TrendingUp}
               sentiment="positive"
-              headline="Fortinet Traffic Surge"
-              body="6.4K → 10.5K visits, +64.6% (Oct-Jan)"
+              headline="Palo Alto"
+              body="Leading and showed ~4% growth from Oct to Jan."
             />
             <ContextualInsightCard
-              icon={Zap}
+              icon={Info}
+              sentiment="positive"
+              headline="Fortinet"
+              body="Traffic has stayed steady at around 6K over the past four months."
+            />
+            <ContextualInsightCard
+              icon={TrendingDown}
               sentiment="negative"
-              headline="PA & CS Lead Traffic"
-              body="12.4K, +48.5%; CS: 11.7K surge top two (Oct-Jan)"
+              headline="Cisco"
+              body="Ranks third and declined by ~21% from Oct to Jan."
             />
           </>
         );
@@ -283,16 +301,22 @@ export function SlideZeroTrust({ onNavigateHome }: { onNavigateHome?: () => void
         return (
           <>
             <ContextualInsightCard
-              icon={Sparkles}
-              sentiment="neutral"
-              headline="Fortinet AI Competitive"
-              body="178 AI keywords, competitive (Nov-Jan)"
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="Fortinet"
+              body="Leading and grew by ~16% by January 2026."
             />
             <ContextualInsightCard
-              icon={Sparkles}
-              sentiment="neutral"
-              headline="CrowdStrike AI Lead"
-              body="183 AI keywords, slightly ahead (Nov-Jan)"
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="CrowdStrike"
+              body="Ranks second and saw ~4% growth over the period."
+            />
+            <ContextualInsightCard
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="Palo Alto"
+              body="Follows closely Fortinet with ~5% growth from Oct to Jan."
             />
           </>
         );
@@ -406,9 +430,9 @@ export function SlideZeroTrust({ onNavigateHome }: { onNavigateHome?: () => void
             </div>
 
             {/* Insights Section - 4 columns */}
-            {/* <div className="col-span-4 flex flex-col gap-4">
+            <div className="col-span-4 flex flex-col gap-4">
               {getInsights()}
-            </div> */}
+            </div>
           </div>
         </div>
       ) : (

@@ -1,6 +1,6 @@
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { useState } from 'react';
-import { TrendingUp, BarChart3, Zap, Sparkles } from 'lucide-react';
+import { TrendingUp, BarChart3, Zap, Sparkles, Info, TrendingDown } from 'lucide-react';
 import { formatChartAxisNumber } from '@/app/utils/format';
 import {
   SlideContainer,
@@ -233,14 +233,14 @@ export function SlideDashboard({ onNavigateHome }: { onNavigateHome?: () => void
             <ContextualInsightCard
               icon={TrendingUp}
               sentiment="positive"
-              headline="Fortinet Keyword Growth"
-              body="175 → 196 SASE keywords, +12% (Oct-Jan)"
+              headline="Palo Alto"
+              body="Increased by 11%."
             />
             <ContextualInsightCard
-              icon={BarChart3}
-              sentiment="neutral"
-              headline="Palo Alto Leads"
-              body="200 SASE keywords, closely ahead (Oct-Jan)"
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="Fortinet"
+              body="Second place with a 12% increase over Oct 25 - Jan 26"
             />
           </>
         );
@@ -248,16 +248,16 @@ export function SlideDashboard({ onNavigateHome }: { onNavigateHome?: () => void
         return (
           <>
             <ContextualInsightCard
-              icon={TrendingUp}
-              sentiment="positive"
-              headline="Fortinet Elite Visibility"
-              body="188 Page 1, 95.9% ratio, matches PA (Oct-Jan)"
+              icon={Info}
+              sentiment="neutral"
+              // headline="Fortinet Elite Visibility"
+              body="Palo Alto and Fortinet are in the same position with 188 keywords"
             />
             <ContextualInsightCard
-              icon={BarChart3}
-              sentiment="neutral"
-              headline="Palo Alto Visibility"
-              body="188 Page 1 rankings, tied with Fortinet (Oct-Jan)"
+              icon={TrendingUp}
+              sentiment="positive"
+              // headline="Palo Alto Visibility"
+              body="Cisco is next, with a 131 - > 13% increase."
             />
           </>
         );
@@ -265,16 +265,16 @@ export function SlideDashboard({ onNavigateHome }: { onNavigateHome?: () => void
         return (
           <>
             <ContextualInsightCard
-              icon={Zap}
-              sentiment="negative"
-              headline="Fortinet Traffic Volatility"
-              body="11K → 10K SASE traffic, -9.2% drop (Oct-Jan)"
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="Palo Alto"
+              body="Leading the competition with 16% Growth."
             />
             <ContextualInsightCard
-              icon={Zap}
-              sentiment="neutral"
-              headline="Palo Alto Consistent"
-              body="Steady growth +18.5% to 10.7K (Oct-Jan)"
+              icon={TrendingDown}
+              sentiment="negative"
+              headline="Fortinet"
+              body="Second place with a 1% decrease."
             />
           </>
         );
@@ -282,16 +282,16 @@ export function SlideDashboard({ onNavigateHome }: { onNavigateHome?: () => void
         return (
           <>
             <ContextualInsightCard
-              icon={Sparkles}
-              sentiment="neutral"
-              headline="Fortinet AI Stable"
-              body="125 SASE AI keywords, stable (Nov-Jan)"
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="Palo Alto"
+              body="Leading with 3% growth over the last four months."
             />
             <ContextualInsightCard
-              icon={Sparkles}
+              icon={Info}
               sentiment="neutral"
-              headline="Palo Alto AI Leads"
-              body="127 → 130 AI keywords, +2.4% (Nov-Jan)"
+              headline="Fortinet"
+              body="Remained stable for the past four months with around 125."
             />
           </>
         );
@@ -405,9 +405,9 @@ export function SlideDashboard({ onNavigateHome }: { onNavigateHome?: () => void
             </div>
 
             {/* Insights Section - 4 columns */}
-            {/* <div className="col-span-4 flex flex-col gap-4">
+            <div className="col-span-4 flex flex-col gap-4">
               {getInsights()}
-            </div> */}
+            </div>
           </div>
         </div>
       ) : (

@@ -1,6 +1,6 @@
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { useState } from 'react';
-import { TrendingUp, BarChart3, Zap, Sparkles, Target } from 'lucide-react';
+import { TrendingUp, BarChart3, Zap, Sparkles, Target, TrendingDown, Info } from 'lucide-react';
 import { formatChartAxisNumber } from '@/app/utils/format';
 import {
   SlideContainer,
@@ -243,14 +243,14 @@ export function SlideSDWANMetrics({ onNavigateHome }: { onNavigateHome?: () => v
             <ContextualInsightCard
               icon={TrendingUp}
               sentiment="positive"
-              headline="Fortinet Keyword Growth"
-              body="175 → 196 SD-WAN keywords, +12% (Oct-Jan)"
+              headline="Fortinet"
+              body="+5.6% growth from 288 to 304 (Oct–Jan)"
             />
             <ContextualInsightCard
-              icon={BarChart3}
-              sentiment="neutral"
-              headline="Cisco Leads Keywords"
-              body="314 SD-WAN keywords, +5.7% growth (Oct-Jan)"
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="Cisco"
+              body="+5.7 % growth from 297 to 314 (Oct–Jan)"
             />
           </>
         );
@@ -260,14 +260,14 @@ export function SlideSDWANMetrics({ onNavigateHome }: { onNavigateHome?: () => v
             <ContextualInsightCard
               icon={TrendingUp}
               sentiment="positive"
-              headline="Fortinet Page 1 Elite"
-              body="188 Page 1, 96.1% ratio, top (Oct-Jan)"
+              headline="Palo Alto"
+              body="Leading with 10% growth"
             />
             <ContextualInsightCard
               icon={Target}
               sentiment="neutral"
-              headline="Cisco Volume Leader"
-              body="252 Page 1 rankings, +4.1% growth (Oct-Jan)"
+              // headline="Cisco Volume Leader"
+              body="Fortinet is next, and Cisco is close behind."
             />
           </>
         );
@@ -275,16 +275,22 @@ export function SlideSDWANMetrics({ onNavigateHome }: { onNavigateHome?: () => v
         return (
           <>
             <ContextualInsightCard
-              icon={Zap}
+              icon={TrendingDown}
               sentiment="negative"
-              headline="Fortinet Traffic Decline"
-              body="11K → 10K traffic, -9.2% drop (Oct-Jan)"
+              headline="Cisco"
+              body="Leading but saw a 10% drop in January 2026."
             />
             <ContextualInsightCard
-              icon={Zap}
+              icon={Info}
               sentiment="neutral"
-              headline="Palo Alto Steady Rise"
-              body="Steady +18.5% to 10.7K traffic (Oct-Jan)"
+              // headline="Palo Alto Steady Rise"
+              body="Fortinet has been stable for the past four months with around 6K traffic."
+            />
+            <ContextualInsightCard
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="Palo Alto"
+              body="Ranks second and has shown an 18% improvement."
             />
           </>
         );
@@ -292,16 +298,16 @@ export function SlideSDWANMetrics({ onNavigateHome }: { onNavigateHome?: () => v
         return (
           <>
             <ContextualInsightCard
-              icon={Sparkles}
-              sentiment="neutral"
-              headline="Fortinet AI Stable"
-              body="125 AI Overview keywords, stable (Nov-Jan)"
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="Palo Alto"
+              body="Leading the competition by 3% growth"
             />
             <ContextualInsightCard
-              icon={Sparkles}
+              icon={Info}
               sentiment="neutral"
-              headline="Palo Alto AI Growth"
-              body="127 → 130 AI keywords, +2.4% (Nov-Jan)"
+              // headline=""
+              body="Fortinet is in second place and has been stable for the past four months with around 125 keywords."
             />
           </>
         );
@@ -415,9 +421,9 @@ export function SlideSDWANMetrics({ onNavigateHome }: { onNavigateHome?: () => v
             </div>
 
             {/* Insights Section - 4 columns */}
-            {/* <div className="col-span-4 flex flex-col gap-4">
+            <div className="col-span-4 flex flex-col gap-4">
               {getInsights()}
-            </div> */}
+            </div>
           </div>
         </div>
       ) : (

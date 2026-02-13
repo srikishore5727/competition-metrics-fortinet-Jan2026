@@ -13,6 +13,7 @@ import {
   CompetitorFilter,
   CHART_CONFIG,
 } from './design-system';
+import { Description } from '@radix-ui/react-dialog';
 
 const VENDORS = [
   { id: 'fortinet', name: 'Fortinet', color: '#EF4444' },
@@ -133,10 +134,21 @@ export function SlideProfundMetrics({ onNavigateHome }: { onNavigateHome?: () =>
   });
 
   const tabs = [
-    { id: 'visibility' as TabType, label: 'AI Visibility %' },
+    { id: 'visibility' as TabType, label: 'AI Visibility %'},
     { id: 'shareOfVoice' as TabType, label: 'Share of Voice %' },
     { id: 'citation' as TabType, label: 'Citation Rate %' },
   ];
+
+
+  const TAB_DESCRIPTIONS: Record<TabType, string> = {
+  visibility:
+    'Visibility represents the percentage of AI responses where your brand is mentioned.',
+  citation:
+    'The percentage of citations that link to your owned domains out of all citations in AI responses.',
+  shareOfVoice:
+    "It measures each brand's percentage of total mentions across AI platforms.",
+};
+
 
   const getChartData = () => {
     switch (activeTab) {
@@ -153,16 +165,22 @@ export function SlideProfundMetrics({ onNavigateHome }: { onNavigateHome?: () =>
         return (
           <>
             <ContextualInsightCard
-              icon={Award}
+              icon={Target}
               sentiment="positive"
-              headline="Fortinet AI Visibility"
-              body="57.7% AI visibility, +0.7% lead (Nov-Jan)"
+              headline="Fortinet leads in Visibility %, Share of Voice %, and Citation %."
+              // body="57.7% AI visibility, +0.7% lead (Nov-Jan)"
+            />
+            <ContextualInsightCard
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="Citation % increased from 9.2% to 12.4% in the last 3 months, while Visibility % and Share of Voice % remained stable."
+              // body="43.5% visibility, -14.2pp behind (Nov-Jan)"
             />
             <ContextualInsightCard
               icon={Target}
               sentiment="neutral"
-              headline="Palo Alto AI Gap"
-              body="43.5% visibility, -14.2pp behind (Nov-Jan)"
+              headline="Other competitors: Visibility & Share of Voice stable; Citation % slightly declined."
+              // body="43.5% visibility, -14.2pp behind (Nov-Jan)"
             />
           </>
         );
@@ -170,16 +188,22 @@ export function SlideProfundMetrics({ onNavigateHome }: { onNavigateHome?: () =>
         return (
           <>
             <ContextualInsightCard
-              icon={Sparkles}
+              icon={Target}
               sentiment="positive"
-              headline="Fortinet Voice Lead"
-              body="10.0% Share of Voice, +33% vs PA (Nov-Jan)"
+              headline="Fortinet leads in Visibility %, Share of Voice %, and Citation %."
+              // body="57.7% AI visibility, +0.7% lead (Nov-Jan)"
             />
             <ContextualInsightCard
-              icon={TrendingDown}
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="Citation % increased from 9.2% to 12.4% in the last 3 months, while Visibility % and Share of Voice % remained stable."
+              // body="43.5% visibility, -14.2pp behind (Nov-Jan)"
+            />
+            <ContextualInsightCard
+              icon={Target}
               sentiment="neutral"
-              headline="Cisco Share of Voice"
-              body="5.9% Share of Voice, lower share (Nov-Jan)"
+              headline="Other competitors: Visibility & Share of Voice stable; Citation % slightly declined."
+              // body="43.5% visibility, -14.2pp behind (Nov-Jan)"
             />
           </>
         );
@@ -187,16 +211,22 @@ export function SlideProfundMetrics({ onNavigateHome }: { onNavigateHome?: () =>
         return (
           <>
             <ContextualInsightCard
-              icon={Zap}
+              icon={Target}
               sentiment="positive"
-              headline="Fortinet Citation Surge"
-              body="9.2% → 12.4% Citation, +34.8% (Nov-Jan)"
+              headline="Fortinet leads in Visibility %, Share of Voice %, and Citation %."
+              // body="57.7% AI visibility, +0.7% lead (Nov-Jan)"
             />
             <ContextualInsightCard
-              icon={TrendingDown}
-              sentiment="negative"
-              headline="Palo Alto Decline"
-              body="Declining citation rate, behind (Nov-Jan)"
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="Citation % increased from 9.2% to 12.4% in the last 3 months, while Visibility % and Share of Voice % remained stable."
+              // body="43.5% visibility, -14.2pp behind (Nov-Jan)"
+            />
+            <ContextualInsightCard
+              icon={Target}
+              sentiment="neutral"
+              headline="Other competitors: Visibility & Share of Voice stable; Citation % slightly declined."
+              // body="43.5% visibility, -14.2pp behind (Nov-Jan)"
             />
           </>
         );
@@ -216,6 +246,7 @@ export function SlideProfundMetrics({ onNavigateHome }: { onNavigateHome?: () =>
         <div className="flex-1 flex flex-col gap-6">
           {/* Tabs */}
           <div className="flex items-start gap-1">
+            
             {tabs.map((tab) => (
               <button
                 key={tab.id}
@@ -235,13 +266,18 @@ export function SlideProfundMetrics({ onNavigateHome }: { onNavigateHome?: () =>
               >
                 {tab.label}
               </button>
+              
             ))}
           </div>
+          <div className="bg-white border border-gray-200 rounded-b-lg px-6 py-3 font-semibold text-xs text-gray-600 shadow-sm">
+          {TAB_DESCRIPTIONS[activeTab]}
+        </div>
 
           {/* Content Area */}
           <div className="flex-1 grid grid-cols-12 gap-6">
             {/* Chart Section - 8 columns */}
             <div className="col-span-8 flex flex-col gap-4">
+              
               <ChartContainer
                 title=""
                 height={420}
@@ -282,9 +318,9 @@ export function SlideProfundMetrics({ onNavigateHome }: { onNavigateHome?: () =>
             </div>
 
             {/* Insights Section - 4 columns */}
-            {/* <div className="col-span-4 flex flex-col gap-4">
+            <div className="col-span-4 flex flex-col gap-4">
               {getInsights()}
-            </div> */}
+            </div>
           </div>
         </div>
       ) : (

@@ -8,19 +8,19 @@ interface SlideIntelDividerProps {
 export function SlideIntelDivider({ onNavigateHome }: SlideIntelDividerProps) {
   const sections = [
     { 
-      name: 'Strategic Insights', 
+      name: 'Content Gap', 
       color: '#FF8E5A', 
       icon: Zap,
       description: 'Actionable recommendations'
     },
     { 
-      name: 'Keyword Gap Analysis', 
+      name: 'Keyword Gap', 
       color: '#EF4444', 
       icon: Search,
       description: 'Competitive opportunity mapping'
     },
     { 
-      name: 'Market Positioning', 
+      name: 'Web Experience', 
       color: '#FFB14A', 
       icon: Target,
       description: 'Competitive landscape insights'

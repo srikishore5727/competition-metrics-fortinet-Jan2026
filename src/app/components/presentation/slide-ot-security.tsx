@@ -1,6 +1,6 @@
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { useState } from 'react';
-import { TrendingUp, Shield, Zap, Sparkles } from 'lucide-react';
+import { TrendingUp, Shield, Zap, Sparkles, TrendingDown, Info } from 'lucide-react';
 import {
   SlideContainer,
   SlideHeader,
@@ -230,16 +230,16 @@ export function SlideOTSecurity({ onNavigateHome }: { onNavigateHome?: () => voi
         return (
           <>
             <ContextualInsightCard
-              icon={Shield}
-              sentiment="positive"
-              headline="Fortinet Keyword Lead"
-              body="226 OT Security keywords, +26.3% (Oct-Jan)"
+              icon={TrendingDown}
+              sentiment="negative"
+              headline="Fortinet"
+              body="Leading the competition, but saw a 1% drop in January 2026."
             />
             <ContextualInsightCard
               icon={TrendingUp}
-              sentiment="neutral"
-              headline="Palo Alto Growth"
-              body="121 keywords, +27.4% strong growth (Oct-Jan)"
+              sentiment="positive"
+              headline="Palo Alto"
+              body="Second place and recorded a 5% growth."
             />
           </>
         );
@@ -247,16 +247,16 @@ export function SlideOTSecurity({ onNavigateHome }: { onNavigateHome?: () => voi
         return (
           <>
             <ContextualInsightCard
-              icon={TrendingUp}
-              sentiment="positive"
-              headline="Fortinet Page 1 Lead"
-              body="192 Page 1, 85.0% ratio, top (Oct-Jan)"
+              icon={Info}
+              sentiment="neutral"
+              headline="Fortinet"
+              body="Leading and has stayed stable at 28 keywords over the last four months."
             />
             <ContextualInsightCard
-              icon={Shield}
-              sentiment="neutral"
-              headline="Palo Alto Visibility"
-              body="94 Page 1 keywords, +22.1% (Oct-Jan)"
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="Palo Alt"
+              body="Second place with 17% growth"
             />
           </>
         );
@@ -264,16 +264,16 @@ export function SlideOTSecurity({ onNavigateHome }: { onNavigateHome?: () => voi
         return (
           <>
             <ContextualInsightCard
-              icon={Zap}
-              sentiment="neutral"
-              headline="Fortinet Traffic Stable"
-              body="6.2K OT Security visits, steady (Oct-Jan)"
+              icon={TrendingDown}
+              sentiment="negative"
+              headline="Fortinet"
+              body="Leading the competition but saw a 5% decrease in January 2026."
             />
             <ContextualInsightCard
-              icon={Zap}
-              sentiment="negative"
-              headline="CrowdStrike Dominates"
-              body="11.1K visits, 2x Fortinet+PA (Oct-Jan)"
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="Palo Alto"
+              body="Second place with a 38% increase over the last two months."
             />
           </>
         );
@@ -281,16 +281,22 @@ export function SlideOTSecurity({ onNavigateHome }: { onNavigateHome?: () => voi
         return (
           <>
             <ContextualInsightCard
-              icon={Sparkles}
+              icon={TrendingUp}
               sentiment="positive"
-              headline="Fortinet AI Lead"
-              body="151 → 175 AI keywords, +15.9% (Nov-Jan)"
+              headline="Fortinet"
+              body="First place with a 14% increase."
             />
             <ContextualInsightCard
-              icon={Sparkles}
+              icon={TrendingUp}
+              sentiment="positive"
+              headline="Palo Alto"
+              body="Second place with a 5% improvement over Oct 25 - Jan 26."
+            />
+            <ContextualInsightCard
+              icon={Info}
               sentiment="neutral"
-              headline="Palo Alto AI Growth"
-              body="84 → 98 AI keywords, +16.7% (Nov-Jan)"
+              headline="CrowdStrike"
+              body="Close behind with only a slight difference."
             />
           </>
         );
@@ -404,9 +410,9 @@ export function SlideOTSecurity({ onNavigateHome }: { onNavigateHome?: () => voi
             </div>
 
             {/* Insights Section - 4 columns */}
-            {/* <div className="col-span-4 flex flex-col gap-4">
+            <div className="col-span-4 flex flex-col gap-4">
               {getInsights()}
-            </div> */}
+            </div>
           </div>
         </div>
       ) : (

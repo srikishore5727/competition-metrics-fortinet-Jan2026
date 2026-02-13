@@ -30,15 +30,15 @@ const categories = [
     ],
     insights: [
       {
-        icon: TrendingUp,
-        type: 'neutral' as const,
-        content: 'Fortinet: 86.3% → 90.5%, +4.2pp SASE progress (Nov-Jan)',
-      },
-      {
         icon: Target,
-        type: 'negative' as const,
-        content: 'Palo Alto: 96.8%, trails Fortinet by 6.3pp (Nov-Jan)',
+        type: 'neutral' as const,
+        content: 'Improvement of 4–7% across most categories, except SecOps, which declined by 6.5% over the last three months.',
       },
+      // {
+      //   icon: Target,
+      //   type: 'negative' as const,
+      //   content: 'Palo Alto: 96.8%, trails Fortinet by 6.3pp (Nov-Jan)',
+      // },
     ],
   },
   {
@@ -53,15 +53,15 @@ const categories = [
     ],
     insights: [
       {
-        icon: Award,
-        type: 'positive' as const,
-        content: 'Fortinet: 91.3%, +4.5pp OT Security lead (Nov-Jan)',
+        icon: Target,
+        type: 'neutral' as const,
+        content: 'Improvement of 4–7% across most categories, except SecOps, which declined by 6.5% over the last three months.',
       },
-      {
-        icon: TrendingUp,
-        type: 'positive' as const,
-        content: 'Palo Alto: 69.8%, 21.5pp behind Fortinet (Nov-Jan)',
-      },
+      // {
+      //   icon: TrendingUp,
+      //   type: 'positive' as const,
+      //   content: 'Palo Alto: 69.8%, 21.5pp behind Fortinet (Nov-Jan)',
+      // },
     ],
   },
   {
@@ -76,15 +76,15 @@ const categories = [
     ],
     insights: [
       {
-        icon: AlertTriangle,
-        type: 'negative' as const,
-        content: 'Fortinet: 67.4% → 74.1%, +6.7pp ZTNA growth (Nov-Jan)',
+        icon: Target,
+        type: 'neutral' as const,
+        content: 'Improvement of 4–7% across most categories, except SecOps, which declined by 6.5% over the last three months.',
       },
-      {
-        icon: TrendingDown,
-        type: 'negative' as const,
-        content: 'Palo Alto: 90.3%, leads by 16.2pp, gap (Nov-Jan)',
-      },
+      // {
+      //   icon: TrendingDown,
+      //   type: 'negative' as const,
+      //   content: 'Palo Alto: 90.3%, leads by 16.2pp, gap (Nov-Jan)',
+      // },
     ],
   },
   {
@@ -99,15 +99,15 @@ const categories = [
     ],
     insights: [
       {
-        icon: TrendingUp,
+        icon: Target,
         type: 'neutral' as const,
-        content: 'Fortinet: 52.0% → 64.4%, +12.4pp Cloud progress (Nov-Jan)',
+        content: 'Improvement of 4–7% across most categories, except SecOps, which declined by 6.5% over the last three months.',
       },
-      {
-        icon: AlertTriangle,
-        type: 'negative' as const,
-        content: 'Palo Alto: 90.6%, 26.2pp ahead, large gap (Nov-Jan)',
-      },
+      // {
+      //   icon: AlertTriangle,
+      //   type: 'negative' as const,
+      //   content: 'Palo Alto: 90.6%, 26.2pp ahead, large gap (Nov-Jan)',
+      // },
     ],
   },
   {
@@ -122,15 +122,15 @@ const categories = [
     ],
     insights: [
       {
-        icon: AlertTriangle,
-        type: 'negative' as const,
-        content: '17.3%, volatile 23.8% → 16.4% (Nov-Jan)',
-      },
-      {
         icon: Target,
-        type: 'negative' as const,
-        content: 'PA leads 30.6pp; strategy overhaul needed',
+        type: 'neutral' as const,
+        content: 'Improvement of 4–7% across most categories, except SecOps, which declined by 6.5% over the last three months.',
       },
+      // {
+      //   icon: Target,
+      //   type: 'negative' as const,
+      //   content: 'PA leads 30.6pp; strategy overhaul needed',
+      // },
     ],
   },
 ];
@@ -179,7 +179,7 @@ export function SlideCategoryPerformance({ onNavigateHome }: { onNavigateHome?: 
   return (
     <SlideContainer slideNumber={16} onNavigateHome={onNavigateHome}>
       <SlideHeader 
-        title="Focused Category" 
+        title="Focused Category - AI Visibility %" 
         subtitle="(Nov 2025 - Jan 2026)"
       />
 
@@ -297,21 +297,21 @@ export function SlideCategoryPerformance({ onNavigateHome }: { onNavigateHome?: 
           </div>
 
           {/* Insights Section - 4 columns */}
-          {/* <div className="col-span-4 flex flex-col gap-4">
+          <div className="col-span-4 flex flex-col gap-4">
             {activeCategory.insights.map((insight, idx) => (
               <ContextualInsightCard
                 key={idx}
                 icon={insight.icon}
                 sentiment={insight.type}
-                headline=""
+                headline="Fortinet"
                 body={insight.content}
               />
             ))}
-          </div> */}
+          </div>
         </div>
 
         {/* Competitor Legend at bottom */}
-        <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+        {/* <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
           <h4 className={`${TEXT_STYLES.sectionLabel} mb-3`}>Top Performers by Category</h4>
           <div className="flex gap-6 text-xs">
             <div className="flex items-center gap-2">
@@ -333,7 +333,7 @@ export function SlideCategoryPerformance({ onNavigateHome }: { onNavigateHome?: 
               <span className="text-gray-600">OT Security</span>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <SlideFooter source="Source: Profound" />
