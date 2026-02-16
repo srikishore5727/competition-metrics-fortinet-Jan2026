@@ -1,6 +1,6 @@
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { useState } from 'react';
-import { Award, TrendingDown, Link } from 'lucide-react';
+import { Award, TrendingDown, Link, TrendingUp } from 'lucide-react';
 import { formatNumber } from '@/app/utils/format';
 import {
   SlideContainer,
@@ -165,14 +165,14 @@ export function SlideBacklinks({ onNavigateHome }: { onNavigateHome?: () => void
           <ContextualInsightCard
             icon={TrendingDown}
             sentiment="negative"
-            headline="Fortinet referring domains fell 55.8K→54.1K (−1.6K) from Oct 2025–Jan 2026."
-            // body="55.8K → 54.1K domains, -3.0% (Oct-Jan)"
+            headline="Fortinet"
+            body="Referring domains fell 55.8K→54.1K (−1.6K) from Oct 2025–Jan 2026."
           />
           <ContextualInsightCard
             icon={TrendingDown}
             sentiment="negative"
-            headline="Cisco leads 240.8K→231.4K (−9.5K); others show minor declines overall."
-            // body={`${formatNumber(ciscoReferring[3])} domains, leads (Oct-Jan)`}
+            headline="Cisco"
+            body='Leads 240.8K→231.4K (−9.5K); others show minor declines overall.'
           />
         </>
       );
@@ -182,14 +182,14 @@ export function SlideBacklinks({ onNavigateHome }: { onNavigateHome?: () => void
           <ContextualInsightCard
             icon={TrendingDown}
             sentiment="negative"
-            headline="Fortinet backlinks fell from 3.0M to 2.8M (−0.2M) between Oct 2025 and Jan 2026."
-            // body="16.6M → 16.3M backlinks, -1.7% (Oct-Jan)"
+            headline="Fortinet"
+            body="Backlinks fell from 3.0M to 2.8M (−0.2M) between Oct 2025 and Jan 2026."
           />
           <ContextualInsightCard
-            icon={TrendingDown}
-            sentiment="negative"
-            headline="Cisco leads 48.3M; others show smaller declines or stability."
-            // body="46.7M backlinks, industry decline (Oct-Jan)"
+            icon={TrendingUp}
+            sentiment="positive"
+            headline="Cisco"
+            body="Leads 48.3M; others show smaller declines or stability."
           />
         </>
       );

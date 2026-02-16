@@ -167,20 +167,20 @@ export function SlideProfundMetrics({ onNavigateHome }: { onNavigateHome?: () =>
             <ContextualInsightCard
               icon={Target}
               sentiment="positive"
-              headline="Fortinet leads in Visibility %, Share of Voice %, and Citation %."
-              // body="57.7% AI visibility, +0.7% lead (Nov-Jan)"
+              headline=""
+              body="Fortinet Leads in Visibility %, Share of Voice %, and Citation %."
             />
             <ContextualInsightCard
               icon={TrendingUp}
               sentiment="positive"
-              headline="Citation % increased from 9.2% to 12.4% in the last 3 months, while Visibility % and Share of Voice % remained stable."
-              // body="43.5% visibility, -14.2pp behind (Nov-Jan)"
+              headline=""
+              body="Citation % increased from 9.2% to 12.4% in the last 3 months, while Visibility % and Share of Voice % remained stable."
             />
             <ContextualInsightCard
               icon={Target}
               sentiment="neutral"
-              headline="Other competitors: Visibility & Share of Voice stable; Citation % slightly declined."
-              // body="43.5% visibility, -14.2pp behind (Nov-Jan)"
+              headline=""
+              body="Other competitors: Visibility & Share of Voice stable; Citation % slightly declined."
             />
           </>
         );
@@ -190,20 +190,20 @@ export function SlideProfundMetrics({ onNavigateHome }: { onNavigateHome?: () =>
             <ContextualInsightCard
               icon={Target}
               sentiment="positive"
-              headline="Fortinet leads in Visibility %, Share of Voice %, and Citation %."
-              // body="57.7% AI visibility, +0.7% lead (Nov-Jan)"
+              headline=""
+              body="Fortinet Leads in Visibility %, Share of Voice %, and Citation %."
             />
             <ContextualInsightCard
               icon={TrendingUp}
               sentiment="positive"
-              headline="Citation % increased from 9.2% to 12.4% in the last 3 months, while Visibility % and Share of Voice % remained stable."
-              // body="43.5% visibility, -14.2pp behind (Nov-Jan)"
+              headline=""
+              body="Citation % increased from 9.2% to 12.4% in the last 3 months, while Visibility % and Share of Voice % remained stable."
             />
             <ContextualInsightCard
               icon={Target}
               sentiment="neutral"
-              headline="Other competitors: Visibility & Share of Voice stable; Citation % slightly declined."
-              // body="43.5% visibility, -14.2pp behind (Nov-Jan)"
+              headline=""
+              body="Other competitors: Visibility & Share of Voice stable; Citation % slightly declined."
             />
           </>
         );
@@ -213,20 +213,20 @@ export function SlideProfundMetrics({ onNavigateHome }: { onNavigateHome?: () =>
             <ContextualInsightCard
               icon={Target}
               sentiment="positive"
-              headline="Fortinet leads in Visibility %, Share of Voice %, and Citation %."
-              // body="57.7% AI visibility, +0.7% lead (Nov-Jan)"
+              headline=""
+              body="Fortinet Leads in Visibility %, Share of Voice %, and Citation %."
             />
             <ContextualInsightCard
               icon={TrendingUp}
               sentiment="positive"
-              headline="Citation % increased from 9.2% to 12.4% in the last 3 months, while Visibility % and Share of Voice % remained stable."
-              // body="43.5% visibility, -14.2pp behind (Nov-Jan)"
+              headline=""
+              body="Citation % increased from 9.2% to 12.4% in the last 3 months, while Visibility % and Share of Voice % remained stable."
             />
             <ContextualInsightCard
               icon={Target}
               sentiment="neutral"
-              headline="Other competitors: Visibility & Share of Voice stable; Citation % slightly declined."
-              // body="43.5% visibility, -14.2pp behind (Nov-Jan)"
+              headline=""
+              body="Other competitors: Visibility & Share of Voice stable; Citation % slightly declined."
             />
           </>
         );

@@ -160,14 +160,14 @@ export function SlideAIOverview({ onNavigateHome }: { onNavigateHome?: () => voi
           <ContextualInsightCard
             icon={TrendingUp}
             sentiment="positive"
-            headline="Fortinet grew 12.4K→16.6K mentions (+4.2K) from Oct 2025–Jan 2026."
-            // body="16.6K AI keywords, +34.3% growth (Oct-Jan)"
+            headline="Fortinet"
+            body="Grew 12.4K→16.6K mentions (+4.2K) from Oct 2025–Jan 2026."
           />
           <ContextualInsightCard
             icon={TrendingUp}
             sentiment="positive"
-            headline="Cisco leads 14.4K→18.1K (+3.7K); most competitors show steady growth."
-            // body="18.1K AI keywords, +26.2%, leads (Oct-Jan)"
+            headline="Cisco"
+            body="Leads 14.4K→18.1K (+3.7K); most competitors show steady growth."
           />
         </>
       );
@@ -177,14 +177,14 @@ export function SlideAIOverview({ onNavigateHome }: { onNavigateHome?: () => voi
           <ContextualInsightCard
             icon={TrendingUp}
             sentiment="positive"
-            headline="Fortinet AI traffic rose 89.4K→104.0K (+14.6K) from Oct 2025–Jan 2026."
-            // body="Dec spike 275K AI traffic, volatile (Oct-Jan)"
+            headline="Fortinet"
+            body="AI traffic rose 89.4K→104.0K (+14.6K) from Oct 2025–Jan 2026."
           />
           <ContextualInsightCard
             icon={TrendingUp}
             sentiment="positive"
-            headline="Cisco leads 105.8K→127.1K (+21.3K); most others show moderate growth overall."
-            // body="127K AI traffic; CS drop 169K → 22K (Oct-Jan)"
+            headline="Cisco"
+            body="Leads 105.8K→127.1K (+21.3K); most others show moderate growth overall."
           />
         </>
       );

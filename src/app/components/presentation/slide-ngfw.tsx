@@ -224,17 +224,17 @@ export function SlideNGFW({ onNavigateHome }: SlideNGFWProps) {
       case 'traffic':
         return (
           <>
-            <ContextualInsightCard
+            {/* <ContextualInsightCard
               icon={TrendingUp}
               sentiment="positive"
               headline="Fortinet"
               body="Steady growth and increase by 33.6%"
-            />
+            /> */}
             <ContextualInsightCard
               icon={Zap}
               sentiment="positive"
-              headline="Fortinet is leading than competitions"
-              // body="+83.9% to 29.2K; Gap narrowed 7.2K→1.7K (Oct-Jan)"
+              headline="Fortinet"
+              body="Leading than competitions with Steady growth and an increase by 33.6%"
             />
           </>
         );

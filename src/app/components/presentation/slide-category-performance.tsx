@@ -29,17 +29,28 @@ const categories = [
       { period: 'Jan 2026', fortinet: 90.5, top: 96.8 },
     ],
     insights: [
-      {
-        icon: Target,
-        type: 'neutral' as const,
-        content: 'Improvement of 4–7% across most categories, except SecOps, which declined by 6.5% over the last three months.',
-      },
-      // {
-      //   icon: Target,
-      //   type: 'negative' as const,
-      //   content: 'Palo Alto: 96.8%, trails Fortinet by 6.3pp (Nov-Jan)',
-      // },
-    ],
+  {
+    icon: Award,
+    type: 'neutral' as const,
+    headline: 'Top Performers by Category',
+    content: (
+      <>
+        <ul className="list-disc pl-4 space-y-1">
+          <li>SASE, ZTNA, Cloud Security, SecOps – Palo Alto</li>
+          <li>OT Security – Fortinet</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    icon: TrendingUp,
+    type: 'neutral' as const,
+    headline: 'Fortinet',
+    content:
+      'Improvement of 4–7% across most categories, except SecOps, which declined by 6.5% over the last three months.',
+  },
+],
+
   },
   {
     id: 'otSecurity' as CategoryType,
@@ -52,17 +63,27 @@ const categories = [
       { period: 'Jan 2026', fortinet: 91.3, top: 91.3, paloAlto: 69.8 },
     ],
     insights: [
-      {
-        icon: Target,
-        type: 'neutral' as const,
-        content: 'Improvement of 4–7% across most categories, except SecOps, which declined by 6.5% over the last three months.',
-      },
-      // {
-      //   icon: TrendingUp,
-      //   type: 'positive' as const,
-      //   content: 'Palo Alto: 69.8%, 21.5pp behind Fortinet (Nov-Jan)',
-      // },
-    ],
+  {
+    icon: Award,
+    type: 'neutral' as const,
+    headline: 'Top Performers by Category',
+    content: (
+      <>
+        <ul className="list-disc pl-4 space-y-1">
+          <li>SASE, ZTNA, Cloud Security, SecOps – Palo Alto</li>
+          <li>OT Security – Fortinet</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    icon: TrendingUp,
+    type: 'neutral' as const,
+    headline: 'Fortinet',
+    content:
+      'Improvement of 4–7% across most categories, except SecOps, which declined by 6.5% over the last three months.',
+  },
+],
   },
   {
     id: 'ztna' as CategoryType,
@@ -75,17 +96,28 @@ const categories = [
       { period: 'Jan 2026', fortinet: 74.1, top: 90.3 },
     ],
     insights: [
-      {
-        icon: Target,
-        type: 'neutral' as const,
-        content: 'Improvement of 4–7% across most categories, except SecOps, which declined by 6.5% over the last three months.',
-      },
-      // {
-      //   icon: TrendingDown,
-      //   type: 'negative' as const,
-      //   content: 'Palo Alto: 90.3%, leads by 16.2pp, gap (Nov-Jan)',
-      // },
-    ],
+  {
+    icon: Award,
+    type: 'neutral' as const,
+    headline: 'Top Performers by Category',
+    content: (
+      <>
+        <ul className="list-disc pl-4 space-y-1">
+          <li>SASE, ZTNA, Cloud Security, SecOps – Palo Alto</li>
+          <li>OT Security – Fortinet</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    icon: TrendingUp,
+    type: 'neutral' as const,
+    headline: 'Fortinet',
+    content:
+      'Improvement of 4–7% across most categories, except SecOps, which declined by 6.5% over the last three months.',
+  },
+],
+
   },
   {
     id: 'cloudSecurity' as CategoryType,
@@ -98,17 +130,27 @@ const categories = [
       { period: 'Jan 2026', fortinet: 64.4, top: 90.6 },
     ],
     insights: [
-      {
-        icon: Target,
-        type: 'neutral' as const,
-        content: 'Improvement of 4–7% across most categories, except SecOps, which declined by 6.5% over the last three months.',
-      },
-      // {
-      //   icon: AlertTriangle,
-      //   type: 'negative' as const,
-      //   content: 'Palo Alto: 90.6%, 26.2pp ahead, large gap (Nov-Jan)',
-      // },
-    ],
+  {
+    icon: Award,
+    type: 'neutral' as const,
+    headline: 'Top Performers by Category',
+    content: (
+      <>
+        <ul className="list-disc pl-4 space-y-1">
+          <li>SASE, ZTNA, Cloud Security, SecOps – Palo Alto</li>
+          <li>OT Security – Fortinet</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    icon: TrendingUp,
+    type: 'neutral' as const,
+    headline: 'Fortinet',
+    content:
+      'Improvement of 4–7% across most categories, except SecOps, which declined by 6.5% over the last three months.',
+  },
+],
   },
   {
     id: 'secOps' as CategoryType,
@@ -121,17 +163,27 @@ const categories = [
       { period: 'Jan 2026', fortinet: 17.3, top: 47.9 },
     ],
     insights: [
-      {
-        icon: Target,
-        type: 'neutral' as const,
-        content: 'Improvement of 4–7% across most categories, except SecOps, which declined by 6.5% over the last three months.',
-      },
-      // {
-      //   icon: Target,
-      //   type: 'negative' as const,
-      //   content: 'PA leads 30.6pp; strategy overhaul needed',
-      // },
-    ],
+  {
+    icon: Award,
+    type: 'neutral' as const,
+    headline: 'Top Performers by Category',
+    content: (
+      <>
+        <ul className="list-disc pl-4 space-y-1">
+          <li>SASE, ZTNA, Cloud Security, SecOps – Palo Alto</li>
+          <li>OT Security – Fortinet</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    icon: TrendingUp,
+    type: 'neutral' as const,
+    headline: 'Fortinet',
+    content:
+      'Improvement of 4–7% across most categories, except SecOps, which declined by 6.5% over the last three months.',
+  },
+],
   },
 ];
 
@@ -303,7 +355,7 @@ export function SlideCategoryPerformance({ onNavigateHome }: { onNavigateHome?: 
                 key={idx}
                 icon={insight.icon}
                 sentiment={insight.type}
-                headline="Fortinet"
+                headline={insight.headline}
                 body={insight.content}
               />
             ))}
